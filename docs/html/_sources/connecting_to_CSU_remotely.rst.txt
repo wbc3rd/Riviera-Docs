@@ -7,17 +7,19 @@ In this guide, we will also show you how to set up DUO on your phone. DUO is a f
 
 Installing DUO on Mobile
 --------------------------
+
 .. tabs:: 
 
-   .. tab:: Windows
+   .. tab:: iOS
       test
 
-   .. tab:: MacOS
+   .. tab:: Android
       test
 
 
 Installing Global Protect
 --------------------------
+
 .. tabs:: 
 
    .. tab:: Windows
