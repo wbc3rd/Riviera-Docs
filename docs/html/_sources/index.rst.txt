@@ -19,16 +19,23 @@ Contents
    :caption: Accessing Riviera
 
    connecting_to_CSU_remotely
+   ssh_program
+   frequently_asked_questions
 
 .. toctree::
-   :caption: Setting an Enviorment
+   :caption: Installing Software
    
-   connecting_to_CSU_remotely
+   installing_python_and_packages
+   installing_r_and_libraries
+   installing_c_libraries
+   installing_alphafold_3
 
 .. toctree::
    :caption: Running Jobs
    
-   connecting_to_CSU_remotely
+   what_is_slurm
+   what_compute_is_avail
+   creating_slurm_script
 
 .. toctree::
    :caption: File Transfer
