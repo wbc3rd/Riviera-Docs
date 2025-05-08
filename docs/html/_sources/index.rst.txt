@@ -12,8 +12,6 @@ how to :ref:`installation` the project.
 
    This documentation is run by a potentially dyslexic grad student so email dkott@colostate.edu for any typos
 
-Contents
---------
 
 .. toctree::
    :caption: Accessing Riviera
