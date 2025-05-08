@@ -16,31 +16,31 @@ Contents
 --------
 
 .. toctree::
-   :caption: **Accessing Riviera**
+   :caption: Accessing Riviera
 
    connecting_to_CSU_remotely
 
 .. toctree::
-   :caption: **Setting an Enviorment**
+   :caption: Setting an Enviorment
    
    connecting_to_CSU_remotely
 
 .. toctree::
-   :caption: **Running Jobs**
+   :caption: Running Jobs
    
    connecting_to_CSU_remotely
 
 .. toctree::
-   :caption: **File Transfer**
+   :caption: File Transfer
    
    connecting_to_CSU_remotely
 
 .. toctree::
-   :caption: **Cluster Etiquette**
+   :caption: Cluster Etiquette
    
    connecting_to_CSU_remotely
 
 .. toctree::
-   :caption: **Linux for HPC**
+   :caption: Linux for HPC
    
    connecting_to_CSU_remotely
