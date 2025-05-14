@@ -22,7 +22,9 @@ how to :ref:`installation` the project.
 
 .. toctree::
    :caption: Installing Software
+   :maxdepth: 1
    
+   setting_up_anaconda
    installing_python_and_packages
    installing_r_and_libraries
    installing_c_libraries

@@ -9,6 +9,7 @@
   <title>Connecting to CSU Off Campus &mdash; Riviera 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
 
   
@@ -17,6 +18,8 @@
       <script src="_static/documentation_options.js?v=2709fde1"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
       <script src="_static/tabs.js?v=3030b3cb"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -79,16 +82,94 @@
 <p>In this guide, we will also show you how to set up DUO on your phone. DUO is a free app that adds an extra step to confirm your identity (a process called two-factor authentication) before you can log in. This extra check makes it much harder for someone else to access your account. After setting up DUO, the guide will walk you through installing and using the Global Protect VPN client so you can easily connect to our secure system.</p>
 <section id="installing-duo-on-mobile">
 <h2>Installing DUO on Mobile<a class="headerlink" href="#installing-duo-on-mobile" title="Link to this heading"></a></h2>
-<div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">iOS</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Android</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>test</p>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>test</p>
-</div></div>
+<ol class="arabic simple">
+<li><p><strong>Download the Duo Mobile App</strong></p>
+<ul class="simple">
+<li><p>Open the <strong>App Store</strong> (iOS) or <strong>Google Play Store</strong> (Android).</p></li>
+<li><p>Search for <strong>Duo Mobile</strong> and install the app.</p></li>
+</ul>
+</li>
+<li><p><strong>Register Your Smartphone or Tablet</strong></p>
+<ul class="simple">
+<li><p>Log in to the <a class="reference external" href="https://netid.colostate.edu/twofactor.aspx">NetID Two-Factor Authentication (Duo)</a> page using your NetID and password.</p></li>
+<li><p>Click <strong>Register Device</strong> on the right side of the page.</p></li>
+<li><p>Enter a unique <strong>Device Name</strong> (e.g., <em>Cam’s iPhone 14</em>).</p></li>
+<li><p>Select <strong>Duo Mobile App</strong> from the <strong>Type</strong> dropdown.</p></li>
+<li><p>Choose your device platform (e.g., <em>Apple iOS</em>, <em>Google Android</em>) from the <strong>Platform</strong> dropdown.</p></li>
+<li><p>Click <strong>Save</strong> to store your device information.</p></li>
+<li><p>After saving, the page will refresh to the <strong>Two-Factor Device Activation</strong> screen, displaying a <strong>barcode</strong>. Leave this page open.</p></li>
+</ul>
+</li>
+<li><p><strong>Activate Duo Mobile</strong></p>
+<ul class="simple">
+<li><p>Open the <strong>Duo Mobile</strong> app on your device.</p></li>
+<li><p>Tap <strong>+ Add</strong> next to the <strong>Accounts</strong> section.</p></li>
+<li><p>Use the app’s barcode scanner to <strong>scan the barcode</strong> displayed on the Two-Factor Device Activation page.</p></li>
+<li><p>Once activated, Duo Mobile will show <strong>Colorado State University</strong> as an account.</p></li>
+<li><p>Click <strong>Return</strong> to view your registered devices.</p></li>
+</ul>
+</li>
+</ol>
 </section>
 <section id="installing-global-protect">
 <h2>Installing Global Protect<a class="headerlink" href="#installing-global-protect" title="Link to this heading"></a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">Windows</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">MacOS</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><p>test</p>
-</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><p>test</p>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Windows</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">MacOS</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><ol class="arabic">
+<li><p><strong>Download the Installer</strong></p>
+<p>Use your web browser to connect to the <a class="reference external" href="https://gateway.colostate.edu/global-protect/getsoftwarepage.esp">GlobalProtect web portal downloads page</a> and select the appropriate version for your Windows device:</p>
+<ul class="simple">
+<li><p><strong>64-bit Windows</strong> (Most common): Click “Download Windows 64-bit GlobalProtect agent”.</p></li>
+<li><p><strong>32-bit Windows</strong> (Older devices): Click “Download Windows 32-bit GlobalProtect agent”.</p></li>
+<li><p><strong>ARM Windows</strong> (Surface and tablets): <a class="reference external" href="https://csusystem.freshservice.com/support/tickets/new">Submit a help request</a> for the GlobalProtect ARM installer.</p></li>
+</ul>
+<p><strong>Tip:</strong> To check your processor type, open <em>About Your PC</em> and look at <em>System Type</em>.</p>
+</li>
+<li><p><strong>Install the Software</strong></p>
+<p>After downloading the installer, open it and proceed through the installation steps. Once installation is complete, open GlobalProtect from the Start menu.</p>
+</li>
+<li><p><strong>Configure and Connect</strong></p>
+<ul class="simple">
+<li><p>Enter <cite>gateway.colostate.edu</cite> or <cite>pueblogateway.colostate.edu</cite> as the Gateway Address.</p></li>
+<li><p>Click <strong>Connect</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Authenticate with Duo</strong></p>
+<p>Before the connection can be established, you’ll need to authenticate using Duo for security.</p>
+</li>
+<li><p><strong>Verify Connection</strong></p>
+<p>Once GlobalProtect displays <strong>“Connected”</strong>, your VPN is active and you may now securely access CSU resources.</p>
+</li>
+</ol>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><ol class="arabic">
+<li><p><strong>Download the Installer</strong></p>
+<p>Use your web browser to connect to the <a class="reference external" href="https://gateway.colostate.edu/global-protect/getsoftwarepage.esp">GlobalProtect web portal downloads page</a> and select:</p>
+<ul class="simple">
+<li><p>Click <strong>“Download Mac 32/64-bit GlobalProtect agent”</strong>.</p></li>
+<li><p><strong>Important:</strong> Do <strong>not</strong> install GlobalProtect from the Apple App Store unless you’re using an iPhone or iPad.</p></li>
+</ul>
+</li>
+<li><p><strong>Install the Software</strong></p>
+<p>After downloading the installer, open it and proceed through the installation steps.
+- On the <em>Installation Type</em> step, <strong>check the box for “GlobalProtect System extensions”</strong>—GlobalProtect will not work if this system extension is missing.</p>
+</li>
+<li><p><strong>Security Settings on macOS</strong></p>
+<p>When you open GlobalProtect for the first time, macOS may prompt you to modify your security settings.
+- Follow the instructions carefully—GlobalProtect will <strong>not</strong> work unless these settings are adjusted.</p>
+</li>
+<li><p><strong>Configure and Connect</strong></p>
+<ul class="simple">
+<li><p>Open GlobalProtect from <strong>Spotlight</strong>.</p></li>
+<li><p>Enter <cite>gateway.colostate.edu</cite> or <cite>pueblogateway.colostate.edu</cite> in the <strong>Portal</strong> field.</p></li>
+<li><p>Click <strong>Connect</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Authenticate with Duo</strong></p>
+<p>Before GlobalProtect can finish connecting, you’ll need to authenticate using Duo for security.</p>
+</li>
+<li><p><strong>Verify Connection</strong></p>
+<p>Once GlobalProtect displays <strong>“Connected”</strong>, your VPN is active and ready for use.</p>
+</li>
+</ol>
 </div></div>
 </section>
 </section>
