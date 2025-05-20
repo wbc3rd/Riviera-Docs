@@ -44,6 +44,7 @@ HPC systems often provide distinguished spaces such as a home directory for perm
 **Additional Resources**
 -------------------------
 For a demonstration of creating and running a SLURM script, check out the `YouTube tutorial on SLURM scripts <https://youtu.be/F03HWqmFbK4?si=jXWDhgM2Wy8I7cpN>`_.
+
 Summary
 -------
 This section has guided you through the essential tools for data transfer—namely SCP, rsync, and SFTP—and provided insights on managing storage on an HPC system. Efficient file management keeps your projects organized, ensures optimal performance, and helps maintain a fair computing environment for all users.
