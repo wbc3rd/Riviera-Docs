@@ -1,4 +1,6 @@
 What is SLURM?
 ==========================
 
-for the love of god 
+High Performance Computing (HPC) systems often use SLURM—a workload manager—to allocate resources and schedule jobs. SLURM scripts are essentially shell scripts that tell the scheduler how to run your job. This guide will walk you through the process of creating a basic SLURM script and customizing it for your workload.
+
+Running a SLURM script requires more than just writing commands; it demands a clear understanding of the computing resources available and how to efficiently request them. Before submitting a job, you must be familiar with your HPC system's architecture and limitations—knowing details such as the number of available nodes, CPU cores per node, memory limits, and any specialized hardware like GPUs. Additionally, it is crucial to understand the scheduling policies, such as permissible run times, partition names, and job prioritization rules, so that you can tailor your script accordingly. This comprehensive approach ensures that the SLURM scheduler can effectively match your job requirements with the available resources, leading to optimal job performance and reduced wait times.
