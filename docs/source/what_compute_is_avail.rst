@@ -3,7 +3,7 @@ What Computing Resources Are Available?
 
 Before creating your SLURM script, it's essential to understand your HPC system’s infrastructure and current workload. This knowledge helps you decide which node or partition to target and how to request the right resources.
 
-Inspecting Node Status with ``sinfo`` 
+Inspecting Node Status with ``sinfo``
 ---------------------------------------
 
 The ``sinfo`` command gives you a quick overview of all partitions and their nodes, along with their status. When you run::
@@ -64,6 +64,13 @@ Similarly, if you notice that a specific partition has more idle nodes and is op
 
    # Execute your program
    srun python my_cpu_script.py
+
+Resource Efficiency and Fair Use
+---------------------------------
+
+It is crucial to evaluate whether your job actually requires specialized resources, such as GPUs. GPUs can significantly speed up tasks that leverage parallel processing, but they are also a limited and highly sought-after resource. By accurately assessing your job's requirements, you avoid over-requesting expensive resources and help ensure that other users also have access to them.
+
+Maximizing resource utilization is not just about improving your job’s performance—it’s also about system-wide efficiency. Optimizing your script to fully use the allocated resources, whether that means leveraging all available CPU cores or ensuring the GPU is actively engaged during processing, minimizes idle time and prevents creating bottlenecks. This responsible approach promotes a fair computing environment where resources are shared effectively among all users.
 
 Summary
 -------
