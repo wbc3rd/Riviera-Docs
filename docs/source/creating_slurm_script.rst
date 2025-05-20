@@ -58,7 +58,7 @@ Once your job completes, check the ``example_output.log`` and ``example_error.lo
 
 **Additional Resources**
 -------------------------
-For a visual demonstration of creating and running a SLURM script, check out the `YouTube tutorial on SLURM scripts <https://youtu.be/bER-Syr9_pI?si=48lMnWvQ_tufdbPJ>`_.
+For a demonstration of creating and running a SLURM script, check out the `YouTube tutorial on SLURM scripts <https://youtu.be/bER-Syr9_pI?si=48lMnWvQ_tufdbPJ>`_.
 
 **Maximizing Efficiency and Fair Resource Use**
 -------------------------------------------------
