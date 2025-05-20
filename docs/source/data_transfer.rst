@@ -41,7 +41,7 @@ Managing Your Storage
 ---------------------
 HPC systems often provide distinguished spaces such as a home directory for permanent storage and a scratch directory for temporary or large data files. The home directory usually comes with storage quotas, so it is best practice to utilize the scratch space for large datasets, intermediate results, or temporary files. Always refer to your system's documentation regarding file storage policies, cleanup procedures, and backup recommendations to ensure efficient use of the available resources.
 
-**Additional Resources**
+Additional Resources
 -------------------------
 For a demonstration of creating and running a SLURM script, check out the `YouTube tutorial on SLURM scripts <https://youtu.be/F03HWqmFbK4?si=jXWDhgM2Wy8I7cpN>`_.
 
