@@ -40,7 +40,7 @@ how to :ref:`installation` the project.
 .. toctree::
    :caption: File Transfer
    
-   connecting_to_CSU_remotely
+   data_transfer
 
 .. toctree::
    :caption: Cluster Etiquette
