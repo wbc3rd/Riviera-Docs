@@ -56,11 +56,11 @@ Step 5: Review Output and Logs
 -------------------------------
 Once your job completes, check the ``example_output.log`` and ``example_error.log`` files. These logs offer insights into job performance and help diagnose any issues that may have arisen.
 
-Additional Resources
+**Additional Resources**
 -------------------------
 For a demonstration of creating and running a SLURM script, check out the `YouTube tutorial on SLURM scripts <https://youtu.be/bER-Syr9_pI?si=48lMnWvQ_tufdbPJ>`_.
 
-Maximizing Efficiency and Fair Resource Use
+**Maximizing Efficiency and Fair Resource Use**
 -------------------------------------------------
 Before submitting your script, consider whether your application truly requires specialized resources such as GPUs. GPUs can dramatically accelerate tasks that benefit from parallel processing, but they are limited. By accurately assessing your job’s needs, you help maximize resource utilization without creating system bottlenecks. Optimizing your script ensures that the allocated resources are fully utilized during job execution while maintaining a fair computing environment for all users.
 

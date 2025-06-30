@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is SLURM? &mdash; Riviera 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="What Computing Resources Are Available?" href="what_compute_is_avail.html" />
+    <link rel="prev" title="Installing Alphafold 3" href="installing_alphafold_3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Riviera
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Accessing Riviera</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="connecting_to_CSU_remotely.html">Connecting to CSU Off Campus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh_program.html">Installing an SSH Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frequently_asked_questions.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Installing Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setting_up_anaconda.html">Setting Up Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing_python_and_packages.html">Installing Python and Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing_r_and_libraries.html">Installing R and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing_c_libraries.html">Installing C/C++ Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing_alphafold_3.html">Installing Alphafold 3</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running Jobs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What is SLURM?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_compute_is_avail.html">What Computing Resources Are Available?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_slurm_script.html">Creating a SLURM Script</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">File Transfer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_transfer.html">Data Transfer and File Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cluster Etiquette</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="connecting_to_CSU_remotely.html">Connecting to CSU Off Campus</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux for HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="connecting_to_CSU_remotely.html">Connecting to CSU Off Campus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Riviera</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">What is SLURM?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/what_is_slurm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="what-is-slurm">
+<h1>What is SLURM?<a class="headerlink" href="#what-is-slurm" title="Link to this heading"></a></h1>
+<p>High Performance Computing (HPC) systems often use SLURM—a workload manager—to allocate resources and schedule jobs. SLURM scripts are essentially shell scripts that tell the scheduler how to run your job. This guide will walk you through the process of creating a basic SLURM script and customizing it for your workload.</p>
+<p>Running a SLURM script requires more than just writing commands; it demands a clear understanding of the computing resources available and how to efficiently request them. Before submitting a job, you must be familiar with your HPC system’s architecture and limitations—knowing details such as the number of available nodes, CPU cores per node, memory limits, and any specialized hardware like GPUs. Additionally, it is crucial to understand the scheduling policies, such as permissible run times, partition names, and job prioritization rules, so that you can tailor your script accordingly. This comprehensive approach ensures that the SLURM scheduler can effectively match your job requirements with the available resources, leading to optimal job performance and reduced wait times.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installing_alphafold_3.html" class="btn btn-neutral float-left" title="Installing Alphafold 3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="what_compute_is_avail.html" class="btn btn-neutral float-right" title="What Computing Resources Are Available?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Kott.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

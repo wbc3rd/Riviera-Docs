@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating a SLURM Script &mdash; Riviera 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Transfer and File Management" href="data_transfer.html" />
+    <link rel="prev" title="What Computing Resources Are Available?" href="what_compute_is_avail.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Riviera
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Accessing Riviera</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="connecting_to_CSU_remotely.html">Connecting to CSU Off Campus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh_program.html">Installing an SSH Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frequently_asked_questions.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Installing Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setting_up_anaconda.html">Setting Up Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing_python_and_packages.html">Installing Python and Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing_r_and_libraries.html">Installing R and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing_c_libraries.html">Installing C/C++ Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing_alphafold_3.html">Installing Alphafold 3</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running Jobs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="what_is_slurm.html">What is SLURM?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_compute_is_avail.html">What Computing Resources Are Available?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating a SLURM Script</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-create-the-script-file">Step 1: Create the Script File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-write-the-slurm-script">Step 2: Write the SLURM Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-submit-the-job">Step 3: Submit the Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-monitor-your-job">Step 4: Monitor Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-5-review-output-and-logs">Step 5: Review Output and Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-resources"><strong>Additional Resources</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maximizing-efficiency-and-fair-resource-use"><strong>Maximizing Efficiency and Fair Resource Use</strong></a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">File Transfer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_transfer.html">Data Transfer and File Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cluster Etiquette</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="connecting_to_CSU_remotely.html">Connecting to CSU Off Campus</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux for HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="connecting_to_CSU_remotely.html">Connecting to CSU Off Campus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Riviera</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Creating a SLURM Script</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/creating_slurm_script.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-a-slurm-script">
+<h1>Creating a SLURM Script<a class="headerlink" href="#creating-a-slurm-script" title="Link to this heading"></a></h1>
+<p>In this section, we will guide you step-by-step on creating and running a SLURM script. Once you’ve evaluated the available computing resources, you are ready to write a script that integrates your resource requests, module loads, and job commands.</p>
+<section id="step-1-create-the-script-file">
+<h2>Step 1: Create the Script File<a class="headerlink" href="#step-1-create-the-script-file" title="Link to this heading"></a></h2>
+<p>Open your favorite text editor and create a new file—commonly named <code class="docutils literal notranslate"><span class="pre">job_script.sh</span></code>. This file will serve as the blueprint for your job submission.</p>
+</section>
+<section id="step-2-write-the-slurm-script">
+<h2>Step 2: Write the SLURM Script<a class="headerlink" href="#step-2-write-the-slurm-script" title="Link to this heading"></a></h2>
+<p>Every SLURM script begins with a bash shebang, followed by a series of <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> directives that specify resource allocations. Below is an example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=ExampleJob         # Set a descriptive name for your job.</span>
+<span class="c1">#SBATCH --output=example_output.log   # Direct standard output to a file.</span>
+<span class="c1">#SBATCH --error=example_error.log     # Direct error output to a file.</span>
+<span class="c1">#SBATCH --partition=batch             # Specify the partition to use.</span>
+<span class="c1">#SBATCH --time=01:00:00               # Maximum run time (hh:mm:ss).</span>
+<span class="c1">#SBATCH --nodes=1                     # Number of nodes.</span>
+<span class="c1">#SBATCH --ntasks-per-node=16          # Number of tasks per node.</span>
+
+<span class="c1"># Load necessary modules or environment variables.</span>
+module<span class="w"> </span>load<span class="w"> </span>python/3.8
+
+<span class="c1"># Run your application.</span>
+srun<span class="w"> </span>python<span class="w"> </span>my_script.py
+</pre></div>
+</div>
+<p><strong>Explanation of the Directives:</strong>
+- <code class="docutils literal notranslate"><span class="pre">--job-name</span></code> sets a label for your job, making it easier to locate in the queue.
+- <code class="docutils literal notranslate"><span class="pre">--output</span></code> and <code class="docutils literal notranslate"><span class="pre">--error</span></code> capture the job’s output and error messages, which can be vital for debugging.
+- <code class="docutils literal notranslate"><span class="pre">--partition</span></code> selects the appropriate subset of nodes, ensuring your job is run on the intended hardware.
+- <code class="docutils literal notranslate"><span class="pre">--time</span></code> defines the maximum runtime, helping the scheduler manage job durations.
+- <code class="docutils literal notranslate"><span class="pre">--nodes</span></code> and <code class="docutils literal notranslate"><span class="pre">--ntasks-per-node</span></code> let you fine-tune the scope of resource allocation.</p>
+</section>
+<section id="step-3-submit-the-job">
+<h2>Step 3: Submit the Job<a class="headerlink" href="#step-3-submit-the-job" title="Link to this heading"></a></h2>
+<p>After saving the script, submit the job to the SLURM scheduler with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job_script.sh
+</pre></div>
+</div>
+<p>SLURM will return a job ID upon submission. This identifier is essential for tracking the job’s status.</p>
+</section>
+<section id="step-4-monitor-your-job">
+<h2>Step 4: Monitor Your Job<a class="headerlink" href="#step-4-monitor-your-job" title="Link to this heading"></a></h2>
+<p>You can monitor the status and progress of your job using several commands:
+- <strong>``squeue``</strong>: Lists all jobs in the queue along with their current state.
+- <strong>``scontrol show job &lt;job_id&gt;``</strong>: Provides detailed info about a specific job.
+- <strong>``sacct``</strong>: Displays accounting information for jobs, including resource usage, which helps in performance tuning.</p>
+</section>
+<section id="step-5-review-output-and-logs">
+<h2>Step 5: Review Output and Logs<a class="headerlink" href="#step-5-review-output-and-logs" title="Link to this heading"></a></h2>
+<p>Once your job completes, check the <code class="docutils literal notranslate"><span class="pre">example_output.log</span></code> and <code class="docutils literal notranslate"><span class="pre">example_error.log</span></code> files. These logs offer insights into job performance and help diagnose any issues that may have arisen.</p>
+</section>
+<section id="additional-resources">
+<h2><strong>Additional Resources</strong><a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h2>
+<p>For a demonstration of creating and running a SLURM script, check out the <a class="reference external" href="https://youtu.be/bER-Syr9_pI?si=48lMnWvQ_tufdbPJ">YouTube tutorial on SLURM scripts</a>.</p>
+</section>
+<section id="maximizing-efficiency-and-fair-resource-use">
+<h2><strong>Maximizing Efficiency and Fair Resource Use</strong><a class="headerlink" href="#maximizing-efficiency-and-fair-resource-use" title="Link to this heading"></a></h2>
+<p>Before submitting your script, consider whether your application truly requires specialized resources such as GPUs. GPUs can dramatically accelerate tasks that benefit from parallel processing, but they are limited. By accurately assessing your job’s needs, you help maximize resource utilization without creating system bottlenecks. Optimizing your script ensures that the allocated resources are fully utilized during job execution while maintaining a fair computing environment for all users.</p>
+<p>By following these steps, you’ll create a robust SLURM script that makes efficient use of your HPC system’s resources. Regularly reviewing and refining your script based on logged performance data will also help ensure that you remain both efficient and considerate of other users.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="what_compute_is_avail.html" class="btn btn-neutral float-left" title="What Computing Resources Are Available?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_transfer.html" class="btn btn-neutral float-right" title="Data Transfer and File Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Kott.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
