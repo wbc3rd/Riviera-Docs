@@ -5,11 +5,6 @@ Riviera, Colorado State University’s high-performance computing (HPC) system, 
 Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimized for bioinformatics, Riviera empowers researchers to process massive datasets, train sophisticated machine learning models, and perform intensive simulations with efficiency. By fostering collaboration and computational accessibility, Riviera strengthens CSU’s commitment to advancing research across diverse fields, enabling breakthroughs in data science, biology, engineering, and beyond.
 
 
-.. note::
-
-   This documentation is run by a potentially dyslexic grad student so email dkott@colostate.edu for any typos
-
-
 .. toctree::
    :caption: Accessing Riviera
 
