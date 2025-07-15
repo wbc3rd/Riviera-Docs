@@ -30,6 +30,10 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
    creating_slurm_script
 
 .. toctree::
+   :caption: Running Software on Riviera
+   containerization
+
+.. toctree::
    :caption: File Transfer
    
    data_transfer
