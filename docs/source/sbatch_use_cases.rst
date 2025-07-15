@@ -175,6 +175,7 @@ Example
     .. tab:: openmp-bin.sh
 
         .. code-block:: bash
+
             #!/bin/bash
             #SBATCH --job-name=omp-bin-search
             #SBATCH --output=%A/omp-bin.out
@@ -193,6 +194,7 @@ Example
     .. tab:: openmp-binary-search.c
 
         .. code-block:: c
+
             #include <stdio.h>
             #include <stdlib.h>
             #include <omp.h>
@@ -303,6 +305,7 @@ Examples
     .. tab:: pytorch-cuda.py
 
         .. code-block:: python
+            
             import torch
             import torch.nn as nn
 
@@ -345,6 +348,7 @@ Examples
     .. tab:: pytorch-stream.py
 
         .. code-block:: python
+
             import torch
             import time
             device = torch.device(torch.accelerator.current_accelerator())
