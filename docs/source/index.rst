@@ -31,6 +31,8 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
 
 .. toctree::
    :caption: Running Software on Riviera
+   :maxdepth: 1
+
    containerization
 
 .. toctree::

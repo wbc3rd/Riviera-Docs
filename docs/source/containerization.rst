@@ -15,7 +15,7 @@ Using Images from Docker Hub
 ----------------------------
 Despite not being docker, Singularity is able to pull images from docker hub and even convert docker images to the Singularity .sif format to run. Pulling images from Docker Hub is the easiest workflow for Singularity. To pull the latest ubuntu image from Docker Hub and then execute a command on it, or run a .sh bash script we do the fallowing: 
 
-.. code-block::bash
+.. code-block:: bash
 
     [username@login001]$ module load slurm
     [username@login001]$ module load singularity
@@ -28,7 +28,7 @@ Binding files to a Singularity Image
 ------------------------------------
 Because a container is isolated from the host OS, io and external files are also isolated and must be bound/mounted to the container manually with the --bind flag. When binding files the path to the local files comes before the colon : and the path to the where the files will be bound inside of the container comes after. If multiple files/directories need to be bound they can be separated by a comma, and if the path is the same locally and in the container only one path is necessary.
 
-.. code-block::bash
+.. code-block:: bash
 
     bash-4.4$ singularity exec --bind <local_path>:<target_path> my_container.sif <command>
 
@@ -41,7 +41,7 @@ It is also possible to build our own image with a dockerfile. If we wanted to bu
 
 **Dockerfile**
 
-.. code-block::dockerfile
+.. code-block:: dockerfile
 
     # A base image to build off of, in this case Ubuntu
     FROM ubuntu:latest
@@ -62,7 +62,7 @@ It is also possible to build our own image with a dockerfile. If we wanted to bu
 
 **test.py**
 
-.. code-block::python
+.. code-block:: python
 
     def main():
         print("Hello, Docker!")
@@ -72,7 +72,7 @@ It is also possible to build our own image with a dockerfile. If we wanted to bu
 
 Now that we have a basic Dockerfile set up we can build the docker image with docker and then save it in a form that Singularity will be able to work with. To do that we need docker running on our local machines, Docker Desktop is the easiest way to have docker running locally. From there we can build the image with docker and then save it as a tar archive, which Singularity will be able to work with to build a compatible image.
 
-.. code-block::bash
+.. code-block:: bash
 
     $ cd BasicImage/
     $ docker build -t basicimage .
@@ -80,13 +80,13 @@ Now that we have a basic Dockerfile set up we can build the docker image with do
 
 We now have everything we need to run this docker image with singularity on Riviera, so now all we need to do is transfer our image archive and python script over.
 
-.. code-block::bash
+.. code-block:: bash
 
     $ scp basicimage.tar test.py username@riviera.colostate.edu:~/your_directory
 
 Now that it is transferred over we need to ssh into Riviera and we can run the container with singularity. When running with singularity we first build the image into a .sif file targeting the docker archive .tar file we just transferred over. We can then run the container making sure that the python file is in the current directory.
 
-.. code-block::bash
+.. code-block:: bash
 
     [username@login001]$ cd your_directory/
     [username@login001]$ module load slurm
@@ -103,7 +103,7 @@ Here is an example of building a more advanced container for use with PyTorch. T
 
 **Dockerfile**
 
-.. code-block::dockerfile   
+.. code-block:: dockerfile   
 
     FROM nvidia/cuda:12.2.2-devel-ubuntu22.04
 
@@ -132,7 +132,7 @@ Here is an example of building a more advanced container for use with PyTorch. T
 
 Now that we have our dockerfile we can build our pytorch container and transfer it over to Riviera. Due to the size of the base nvidia container and the libraries being installed this will take some time. This can also all be sped up by carefully selecting the files that need to be installed and using a lighter weight image like the rocky linux one from nvidia for cuda.
 
-.. code-block::bash
+.. code-block:: bash
 
     $ cd PyTorch/
     $ docker build -t pytorchimage .
@@ -141,7 +141,7 @@ Now that we have our dockerfile we can build our pytorch container and transfer 
 
 Now that our container archive is transferred over we can build it with singularity. Due to the size of the container building it with singularity will overrun the default tmp directory on Riviera, so we will need to specify a new temp directory to use before building such as ~/tmp.
 
-.. code-block::bash
+.. code-block:: bash
 
     [username@login001]$ mkdir temp_directory
     [username@login001]$ export TMPDIR=~/temp_directory
@@ -156,7 +156,7 @@ We have now built our pytorch container with singularity. To run it we need to l
 
 **pytorch-cuda.py**
 
-.. code-block::python
+.. code-block:: python
 
     import torch
     import torch.nn as nn
@@ -171,7 +171,7 @@ We have now built our pytorch container with singularity. To run it we need to l
     output = model(input_data)
     print(f"Output tensor device: {output.device}")
 
-.. code-block::bash
+.. code-block:: bash
 
     [username@login001]$ module load cuda12.2/blas
     [username@login001]$ module load cuda12.2/fft
