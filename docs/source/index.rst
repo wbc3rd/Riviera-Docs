@@ -34,6 +34,7 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
    :maxdepth: 1
 
    containerization
+   sbatch_examples
 
 .. toctree::
    :caption: File Transfer
