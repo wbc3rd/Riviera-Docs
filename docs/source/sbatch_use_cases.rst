@@ -1,4 +1,4 @@
-SBatch Examples
+SBatch Use Cases
 ===============
 
 Job Arrays
