@@ -31,6 +31,9 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
    riviera_linux
    slurm
    sbatch_directives
+
+   :maxdepts: 2
+   
    containerization
    sbatch_use_cases
 
