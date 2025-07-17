@@ -1,7 +1,7 @@
 Creating a SLURM Script
 ========================================
 
-In this section, we will guide you step-by-step on creating and running a SLURM script. Once you’ve evaluated the available computing resources, you are ready to write a script that integrates your resource requests, module loads, and job commands.
+In this section, we will guide you step-by-step on creating and running a SLURM script. Once you've evaluated the available computing resources, you are ready to write a script that integrates your resource requests, module loads, and job commands.
 
 Step 1: Create the Script File
 ---------------------------------
@@ -43,7 +43,7 @@ After saving the script, submit the job to the SLURM scheduler with the followin
 
    sbatch job_script.sh
 
-SLURM will return a job ID upon submission. This identifier is essential for tracking the job’s status.
+SLURM will return a job ID upon submission. This identifier is essential for tracking the job's status.
 
 Step 4: Monitor Your Job
 -------------------------
@@ -62,6 +62,6 @@ For a demonstration of creating and running a SLURM script, check out the `YouTu
 
 Maximizing Efficiency and Fair Resource Use
 -------------------------------------------------
-Before submitting your script, consider whether your application truly requires specialized resources such as GPUs. GPUs can dramatically accelerate tasks that benefit from parallel processing, but they are limited. By accurately assessing your job’s needs, you help maximize resource utilization without creating system bottlenecks. Optimizing your script ensures that the allocated resources are fully utilized during job execution while maintaining a fair computing environment for all users.
+Before submitting your script, consider whether your application truly requires specialized resources such as GPUs. GPUs can dramatically accelerate tasks that benefit from parallel processing, but they are limited. By accurately assessing your job's needs, you help maximize resource utilization without creating system bottlenecks. Optimizing your script ensures that the allocated resources are fully utilized during job execution while maintaining a fair computing environment for all users.
 
 By following these steps, you'll create a robust SLURM script that makes efficient use of your HPC system's resources. Regularly reviewing and refining your script based on logged performance data will also help ensure that you remain both efficient and considerate of other users.

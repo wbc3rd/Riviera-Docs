@@ -1,7 +1,7 @@
 Connecting to CSU Off Campus
 =============================
 
-When you're off-campus, you'll need to use the university’s Virtual Private Network (VPN) to access our network securely. Think of a VPN like a safe, private tunnel that protects the information on your computer from prying eyes. This secure connection is very important because it keeps your work and research data safe even when you’re not on the CSU campus.
+When you're off-campus, you'll need to use the university's Virtual Private Network (VPN) to access our network securely. Think of a VPN like a safe, private tunnel that protects the information on your computer from prying eyes. This secure connection is very important because it keeps your work and research data safe even when you're not on the CSU campus.
 
 In this guide, we will also show you how to set up DUO on your phone. DUO is a free app that adds an extra step to confirm your identity (a process called two-factor authentication) before you can log in. This extra check makes it much harder for someone else to access your account. After setting up DUO, the guide will walk you through installing and using the Global Protect VPN client so you can easily connect to our secure system.
 
@@ -27,7 +27,7 @@ Installing DUO on Mobile
    
    - Open the **Duo Mobile** app on your device.
    - Tap **+ Add** next to the **Accounts** section.
-   - Use the app’s barcode scanner to **scan the barcode** displayed on the Two-Factor Device Activation page.
+   - Use the app's barcode scanner to **scan the barcode** displayed on the Two-Factor Device Activation page.
    - Once activated, Duo Mobile will show **Colorado State University** as an account.
    - Click **Return** to view your registered devices.
 

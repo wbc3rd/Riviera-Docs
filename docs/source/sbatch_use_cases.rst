@@ -372,3 +372,15 @@ Examples
             result2_seq = heavy_computation(data[size // 2:])
             torch.cuda.synchronize()
             print(f"Time taken without streams: {time.time() - start_time:.3f} seconds.")
+
+..
+    Cuda
+    -------
+
+    Use Cases
+    ^^^^^^^^^
+
+    Cuda is the 
+
+    Examples
+    ^^^^^^^^

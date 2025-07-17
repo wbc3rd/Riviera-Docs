@@ -20,17 +20,20 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
    installing_python_and_packages
    installing_r_and_libraries
    installing_c_libraries
-   installing_alphafold_3
 
 .. toctree::
    :caption: Running Jobs
    
-   what_is_slurm
-   what_compute_is_avail
-   creating_slurm_script
+   
 
 .. toctree::
    :caption: Running Software on Riviera
+   :maxdepth: 3
+
+   riviera_linux
+   slurm
+   sbatch_directives
+
    :maxdepth: 2
 
    containerization
@@ -45,7 +48,7 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
    :caption: Cluster Etiquette
 
    prohibited_actions
-   
+
 .. toctree::
    :caption: Linux for HPC
    

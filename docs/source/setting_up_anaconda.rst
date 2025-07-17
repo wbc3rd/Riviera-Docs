@@ -34,14 +34,14 @@ Installing Anaconda
 
 What is an Anaconda Environment?
 --------------------------------
-An **Anaconda environment** is like a separate workspace for your programs. Imagine you're working on different science experiments—you wouldn’t want your materials to mix up and cause confusion. Anaconda environments keep software and tools organized so you don’t run into problems when working on different projects.
+An **Anaconda environment** is like a separate workspace for your programs. Imagine you're working on different science experiments—you wouldn't want your materials to mix up and cause confusion. Anaconda environments keep software and tools organized so you don't run into problems when working on different projects.
 
 Each environment acts like its own **mini-lab**, where you can install specific tools and packages without affecting anything else on your computer.
 
 Why Are Anaconda Environments Important?
 ----------------------------------------
 - **Prevents Conflicts:** Some programs need different versions of Python or packages. Without environments, installing new tools could accidentally break your existing work.
-- **Keeps Projects Organized:** Each project has its own setup, so you don’t mix tools meant for one task with another.
+- **Keeps Projects Organized:** Each project has its own setup, so you don't mix tools meant for one task with another.
 - **Easy to Share:** You can save and share an environment with others, making collaboration easier.
 - **Safe Experimentation:** You can test new software without risking your main system.
 
