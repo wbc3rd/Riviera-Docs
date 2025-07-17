@@ -18,7 +18,7 @@ Here are some common SBATCH directives seen on Riviera:
 ``--cpus-per-task=<number>`` 
     Informs Slurm that each task will require _number_ of CPUS per task. Otherwise Slurm will just try to assign one CPU to each task.
 ``--array=<indices>``
-    Submits a job array, which is multiple instances of the same job without a need to communicate between the jobs. For more on how to set up job arrays see :ref:`Job Arrays`.
+    Submits a job array, which is multiple instances of the same job without a need to communicate between the jobs. For more on how to set up job arrays see `Job Arrays in SBATCH Use Cases <https://riviera-docs.readthedocs.io/en/latest/sbatch_use_cases.html>`_.
 ``--mem=<size>``
     Specifies the memory requirement per node. By default the units are in megabytes, but different units can be specified using the suffix [K\|M\|G\|T]. ``--mem`` is mutually exclusive with ``--mem-per-cpu`` and ``--mem-per-gpu``.
 ``--mem-per-cpu=<size>``

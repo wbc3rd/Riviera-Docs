@@ -16,7 +16,7 @@ Step 2: Write the SBATCH Script
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Every Slurm script begins with a bash shebang, a shebang is the characters ``#!`` followed by a path to an interpreter. For SBATCH scripts the interpreter is bash so the shebang is ``#!/bin/bash``.
 
-After the shebang SBATCH scripts contain a series of directives denoted by ``#SBATCH``. These directives function as settings for the particular job. For a list of common SBATCH directives see `SBATCH Directives`. A very basic example SBATCH script can be seen below, for more SBATCH script examples see `SBatch Use Cases`.
+After the shebang SBATCH scripts contain a series of directives denoted by ``#SBATCH``. These directives function as settings for the particular job. For a list of common SBATCH directives see `SBATCH Directives <https://riviera-docs.readthedocs.io/en/latest/sbatch_directives.html>`_. A very basic example SBATCH script can be seen below, for more SBATCH script examples see `SBatch Use Cases <https://riviera-docs.readthedocs.io/en/latest/sbatch_use_cases.html#>`_.
 
 .. code-block:: bash
 
