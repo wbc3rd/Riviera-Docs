@@ -24,7 +24,7 @@ Riviera uses Slurm for workload management. The basic layout of Riviera as seen 
     * Job tasks are actions run sequentially or concurrently created by a Job step.
     * The majority of jobs will not need to have more than one job task per step, it is typically only used with MPI.
 
-For more on Slurm itself see :ref:`Slurm <slurm>`.
+For more on Slurm itself see `Slurm`_.
 
 File Management
 ---------------
