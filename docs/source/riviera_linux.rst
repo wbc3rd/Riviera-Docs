@@ -15,6 +15,7 @@ Riviera uses Slurm for workload management. The basic layout of Riviera as seen 
     * A partition functions as a queue where job that have been requested get scheduled. 
     * Partitions have constraints such as job size and job time limit.
 * Job: An allocation of compute resources to a user for a period of time.
+    * Jobs contain Job Steps which contain Job Tasks.
 * Job steps: A set of actions within a job.
     * A job has one or more steps associated with it.
     * Jobs created with ``sbatch`` have one implicit step, the Bash script itself
@@ -23,7 +24,7 @@ Riviera uses Slurm for workload management. The basic layout of Riviera as seen 
     * Job tasks are actions run sequentially or concurrently created by a Job step.
     * The majority of jobs will not need to have more than one job task per step, it is typically only used with MPI.
 
-For more on Slurm itself see :ref:`Slurm`.
+For more on Slurm itself see :ref:`Slurm <slurm>`.
 
 File Management
 ---------------
