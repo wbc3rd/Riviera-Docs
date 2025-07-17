@@ -44,7 +44,8 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
 .. toctree::
    :caption: Cluster Etiquette
 
+   prohibited_actions
+   
 .. toctree::
    :caption: Linux for HPC
    
-   connecting_to_CSU_remotely
