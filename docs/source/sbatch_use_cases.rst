@@ -374,15 +374,15 @@ Examples
             print(f"Time taken without streams: {time.time() - start_time:.3f} seconds.")
     
 
-    Cuda
-    -------
-    CUDA(Compute Unified Device Architecture) is NVIDIA's parallel computing platform and programming model for general-purpose computing on GPUs. It allows direct access to GPU hardware for high-performance computing tasks including scientific simulations, machine learning, image processing, and numerical computations. CUDA is particularly effective for problems that can be parallelized across throusands of GPU cores.
+Cuda
+-------
+
+Use Cases
+^^^^^^^^^
+CUDA(Compute Unified Device Architecture) is NVIDIA's parallel computing platform and programming model for general-purpose computing on GPUs. It allows direct access to GPU hardware for high-performance computing tasks including scientific simulations, machine learning, image processing, and numerical computations. CUDA is particularly effective for problems that can be parallelized across throusands of GPU cores.
 ..
     Installing 
     ^^^^^^^^^^
-    
-    Use Cases
-    ^^^^^^^^^
 
     Cuda is the 
 
