@@ -28,4 +28,4 @@ Here are some common SBATCH directives seen on Riviera:
 ``--nodes=<minnodes>[-maxnodes]``
     Requests that a minimum number of _minnodes_ be allocated to the job. A maximum node count may also be specified with _maxnodes_. IF only one number is supplied this is taken as both the minimum and maximum. 
 
-For more SBATCH directives see the `official Slurm documentation <https://slurm.schedmd.com/sbatch.html>`_.`
+For more SBATCH directives see the `Official Slurm documentation <https://slurm.schedmd.com/sbatch.html>`_.`
