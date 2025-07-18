@@ -45,6 +45,7 @@ Riviera has three main types of compute nodes, CPU compute nodes, high memory CP
     * Each GPU compute node has 2 AMD EPYC 7763 64-Core Processors without hyperthreading enabled, four Nvidia A100 80GB graphics cards, and approximately 500 GB of total available memory. 
     
 Each compute node type also has three different partition options that affect run length:
+
 * short where the maximum job length is 2 hours.
 * day-long where the maximum job length is 24 hours.
 * week-long where the maximum job length is 7 days.

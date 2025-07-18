@@ -13,7 +13,7 @@ The ``sinfo`` command gives you a quick overview of all partitions and their nod
 you will see columns that typically include partition names, node state (e.g., idle, alloc, down, mix), available CPU cores, and memory. For example, an output might look like this::
 
    PARTITION  AVAIL  TIMELIMIT   NODES  STATE   NODELIST
-   batch      up     7-00:00:00  10     idle    node[01-10]
+   short-cpu  up     7-00:00:00  10     idle    node[01-10]
    gpu        up     3-00:00:00  5      mix     gpu01, gpu02, gpu03, gpu04, gpu05
 
 In this output:
