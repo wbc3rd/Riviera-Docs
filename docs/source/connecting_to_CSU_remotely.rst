@@ -43,9 +43,9 @@ Installing Global Protect
          
          Use your web browser to connect to the `GlobalProtect web portal downloads page <https://gateway.colostate.edu/global-protect/getsoftwarepage.esp>`_ and select the appropriate version for your Windows device:
          
-         - **64-bit Windows** (Most common): Click "Download Windows 64-bit GlobalProtect agent".
-         - **32-bit Windows** (Older devices): Click "Download Windows 32-bit GlobalProtect agent".
-         - **ARM Windows** (Surface and tablets): `Submit a help request <https://csusystem.freshservice.com/support/tickets/new>`_ for the GlobalProtect ARM installer.
+         * **64-bit Windows** (Most common): Click "Download Windows 64-bit GlobalProtect agent".
+         * **32-bit Windows** (Older devices): Click "Download Windows 32-bit GlobalProtect agent".
+         * **ARM Windows** (Surface and tablets): `Submit a help request <https://csusystem.freshservice.com/support/tickets/new>`_ for the GlobalProtect ARM installer.
 
          **Tip:** To check your processor type, open *About Your PC* and look at *System Type*.
 
@@ -55,8 +55,8 @@ Installing Global Protect
 
       3. **Configure and Connect**
          
-         - Enter `gateway.colostate.edu` or `pueblogateway.colostate.edu` as the Gateway Address.
-         - Click **Connect**.
+         * Enter `gateway.colostate.edu` or `pueblogateway.colostate.edu` as the Gateway Address.
+         * Click **Connect**.
 
       4. **Authenticate with Duo**
          
@@ -73,24 +73,24 @@ Installing Global Protect
    
          Use your web browser to connect to the `GlobalProtect web portal downloads page <https://gateway.colostate.edu/global-protect/getsoftwarepage.esp>`_ and select:
          
-         - Click **"Download Mac 32/64-bit GlobalProtect agent"**.
-         - **Important:** Do **not** install GlobalProtect from the Apple App Store unless you're using an iPhone or iPad.
+         * Click **"Download Mac 32/64-bit GlobalProtect agent"**.
+         * **Important:** Do **not** install GlobalProtect from the Apple App Store unless you're using an iPhone or iPad.
 
       2. **Install the Software**
          
          After downloading the installer, open it and proceed through the installation steps.  
-         - On the *Installation Type* step, **check the box for "GlobalProtect System extensions"**—GlobalProtect will not work if this system extension is missing.
+         * On the *Installation Type* step, **check the box for "GlobalProtect System extensions"**—GlobalProtect will not work if this system extension is missing.
 
       3. **Security Settings on macOS**
          
          When you open GlobalProtect for the first time, macOS may prompt you to modify your security settings.  
-         - Follow the instructions carefully—GlobalProtect will **not** work unless these settings are adjusted.
+         * Follow the instructions carefully—GlobalProtect will **not** work unless these settings are adjusted.
 
       4. **Configure and Connect**
          
-         - Open GlobalProtect from **Spotlight**.
-         - Enter `gateway.colostate.edu` or `pueblogateway.colostate.edu` in the **Portal** field.
-         - Click **Connect**.
+         * Open GlobalProtect from **Spotlight**.
+         * Enter `gateway.colostate.edu` or `pueblogateway.colostate.edu` in the **Portal** field.
+         * Click **Connect**.
 
       5. **Authenticate with Duo**
          

@@ -57,9 +57,9 @@ Step 4: Monitor A Job
 ^^^^^^^^^^^^^^^^^^^^^
 A user can monitor the status and progress of your job using several commands:
 
-- ``squeue``: Lists all jobs in the queue along with their current state.
-- ``scontrol show job <job_id>``: Provides detailed info about a specific job.
-- ``sacct``: Displays accounting information for previously run jobs, including resource usage, which helps in performance tuning.
+* ``squeue``: Lists all jobs in the queue along with their current state.
+* ``scontrol show job <job_id>``: Provides detailed info about a specific job.
+* ``sacct``: Displays accounting information for previously run jobs, including resource usage, which helps in performance tuning.
 
 Step 5: Review Output and Logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -29,11 +29,11 @@ Every SLURM script begins with a bash shebang, followed by a series of ``#SBATCH
    srun python my_script.py
 
 **Explanation of the Directives:**
-- ``--job-name`` sets a label for your job, making it easier to locate in the queue.
-- ``--output`` and ``--error`` capture the job's output and error messages, which can be vital for debugging.
-- ``--partition`` selects the appropriate subset of nodes, ensuring your job is run on the intended hardware.
-- ``--time`` defines the maximum runtime, helping the scheduler manage job durations.
-- ``--nodes`` and ``--ntasks-per-node`` let you fine-tune the scope of resource allocation.
+* ``--job-name`` sets a label for your job, making it easier to locate in the queue.
+* ``--output`` and ``--error`` capture the job's output and error messages, which can be vital for debugging.
+* ``--partition`` selects the appropriate subset of nodes, ensuring your job is run on the intended hardware.
+* ``--time`` defines the maximum runtime, helping the scheduler manage job durations.
+* ``--nodes`` and ``--ntasks-per-node`` let you fine-tune the scope of resource allocation.
 
 Step 3: Submit the Job
 ------------------------

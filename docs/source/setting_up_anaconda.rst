@@ -40,10 +40,10 @@ Each environment acts like its own **mini-lab**, where you can install specific 
 
 Why Are Anaconda Environments Important?
 ----------------------------------------
-- **Prevents Conflicts:** Some programs need different versions of Python or packages. Without environments, installing new tools could accidentally break your existing work.
-- **Keeps Projects Organized:** Each project has its own setup, so you don't mix tools meant for one task with another.
-- **Easy to Share:** You can save and share an environment with others, making collaboration easier.
-- **Safe Experimentation:** You can test new software without risking your main system.
+* **Prevents Conflicts:** Some programs need different versions of Python or packages. Without environments, installing new tools could accidentally break your existing work.
+* **Keeps Projects Organized:** Each project has its own setup, so you don't mix tools meant for one task with another.
+* **Easy to Share:** You can save and share an environment with others, making collaboration easier.
+* **Safe Experimentation:** You can test new software without risking your main system.
 
 How to Create an Anaconda Environment
 --------------------------------------
