@@ -1,2 +1,0 @@
-Installing Alphafold 3
-==========================
