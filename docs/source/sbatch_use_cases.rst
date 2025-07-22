@@ -22,7 +22,7 @@ Example
             ##SBATCH --array=1-5 # Submits a job array with index values between 1 and 5
             #SBATCH --array=1,3,5,7 # Submits a job array with index values of 1,3,5,7
             ##SBATCH --array=1-7:2 # Submits a job array with index values between 1 and 7 with steps of 2 (1,3,5,7)
-            ##SBATCH --array=1-5%2 # Submis a job array with index values between 1 and 5 but limits the number of simultaneously running tasks for this job array to 4
+            ##SBATCH --array=1-5%2 # Submits a job array with index values between 1 and 5 but limits the number of simultaneously running tasks for this job array to 4
             #SBATCH --partition=short-cpu
             #SBATCH --output=%A/out_%a.out # The output file will be in a folder with the name jobId and will have the form out_arrayIndex
             #SBATCH --error=%A/error_%a.err # The error file will be in a folder with the name jobId and will have the form error_arrayIndex
@@ -39,7 +39,7 @@ Example
 
             import sys
 
-            print('Hello from jobid "{}" array index "{}".\n'.format(sys.argv[1],sys.argv[2]))
+            print('Hello from jobId "{}" array index "{}".\n'.format(sys.argv[1],sys.argv[2]))
 
 MPI
 ---
@@ -390,7 +390,7 @@ Examples
 
 .. tabs::
 
-    .. tab:: cude-example.sh
+    .. tab:: cuda-example.sh
 
         .. code-block:: bash
 
