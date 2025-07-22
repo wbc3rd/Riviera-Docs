@@ -36,6 +36,7 @@ After the shebang SBATCH scripts contain a series of directives denoted by ``#SB
    srun python my_script.py
 
 **Explanation of the Directives:**
+
 * ``--job-name`` sets a label for the job, making it easier to locate in the queue.
 * ``--output`` and ``--error`` capture the job's output and error messages and specify the file path that the messages should be written to.
 * ``--partition`` selects the appropriate subset of nodes, ensuring a job is run on the intended hardware.
@@ -55,6 +56,7 @@ SLurm will return a job ID upon submission. This identifier is essential for tra
 Step 4: Monitor A Job
 ^^^^^^^^^^^^^^^^^^^^^
 A user can monitor the status and progress of your job using several commands:
+
 - ``squeue``: Lists all jobs in the queue along with their current state.
 - ``scontrol show job <job_id>``: Provides detailed info about a specific job.
 - ``sacct``: Displays accounting information for previously run jobs, including resource usage, which helps in performance tuning.
@@ -85,11 +87,12 @@ they will see columns that typically include partition names, node state (e.g., 
 
 .. code-block::
 
-   PARTITION  AVAIL  TIMELIMIT   NODES  STATE   NODELIST
-   batch      up     7-00:00:00  10     idle    node[01-10]
-   gpu        up     3-00:00:00  5      mix     gpu01, gpu02, gpu03, gpu04, gpu05
+   PARTITION       AVAIL  TIMELIMIT   NODES  STATE   NODELIST
+   week-long-cpu   up     7-00:00:00  10     idle    node[01-08]
+   day-long-gpu    up     1-00:00:00  5      mix     gnode[001-004]
 
 In this output:
+
 * **idle** nodes are free to run your job.
 * **alloc** or **busy** nodes are currently in use.
 * **mix** indicates that some resources on the node are allocated while others might still be free.
