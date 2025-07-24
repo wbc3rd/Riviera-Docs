@@ -1,2 +1,0 @@
-Installing C/C++ Libraries
-==========================
