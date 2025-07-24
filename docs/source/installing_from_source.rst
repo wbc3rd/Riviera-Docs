@@ -27,7 +27,7 @@ When installing software from source in your home directory, follow this general
         tar -xzf software-1.0.tar.gz 
         cd software-1.0
 
-4. **Configure the installation to your home directory:
+4. **Configure the installation to your home directory:**
 
     .. code-block:: bash 
 
