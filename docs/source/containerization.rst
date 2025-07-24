@@ -13,7 +13,7 @@ Singularity
 
 Using Images from Docker Hub
 ----------------------------
-Despite not being docker, Singularity is able to pull images from docker hub and even convert docker images to the Singularity .sif format to run. Pulling images from Docker Hub is the easiest workflow for Singularity. To pull the latest ubuntu image from Docker Hub and then execute a command on it, or run a .sh bash script we do the fallowing: 
+Despite not being docker, Singularity is able to pull images from docker hub and even convert docker images to the Singularity .sif format to run. Pulling images from Docker Hub is the easiest workflow for Singularity. To pull the latest ubuntu image from Docker Hub and then execute a command on it, or run a .sh bash script we do the following: 
 
 .. code-block:: bash
 
