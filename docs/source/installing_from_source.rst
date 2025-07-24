@@ -46,7 +46,7 @@ When installing software from source in your home directory, follow this general
 
       export PATH=$HOME/lib/bin:$PATH
 
-Look at installing Python from source to see an example 
+.. Look at installing Python from source to see an example 
 
 Summary
 -------
