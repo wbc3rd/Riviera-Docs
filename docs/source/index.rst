@@ -19,7 +19,7 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
    setting_up_anaconda
    installing_python_and_packages
    installing_r_and_libraries
-   installing_c_libraries
+   installing_from_source
 
 .. toctree::
    :caption: Running Jobs
