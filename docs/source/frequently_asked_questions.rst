@@ -37,7 +37,7 @@ Riviera supports up to 500GB of storage in your home directory. Please contact d
 
 **How do I request interactive time?**
 
-See 'Running Interactively <https://riviera-docs.readthedocs.io/en/latest/slurm.html#running-interactively>'_ in the `Slurm Overview <https://riviera-docs.readthedocs.io/en/latest/slurm.html#>`_ for information on running interactively.
+See `Running Interactively <https://riviera-docs.readthedocs.io/en/latest/slurm.html#running-interactively>`_ in the `Slurm Overview <https://riviera-docs.readthedocs.io/en/latest/slurm.html#>`_ for information on running interactively.
 
 **How can I transfer data from my local computer to the cluster?** 
 
