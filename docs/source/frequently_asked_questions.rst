@@ -1,2 +1,32 @@
 Frequently Asked Questions
 ===========================
+**How do I request a Riviera account?** 
+
+To request a Riviera account, go to the Riviera Website. Fill out the survey below. Once submitted, a DSRI system administrator will reach out via email. 
+
+**Who can access the riviera cluster?** 
+
+Access to Riviera is open to all Colorado State University (CSU) researchers and students. Whether you’re a faculty member leading a large research project, a graduate student developing machine learning models, or an undergraduate student exploring data science, you are eligible to use the Riviera cluster. This is provided that your work aligns with academic or research objectives. Access is managed by the Data Science Research Institute and must agree to the HPC usage policies. 
+
+**What compute resources does Riviera offer?**
+
+Riviera provides state-of-the-art computational capabilities tailored to the needs of modern research, particularly in AI and bioinformatics. Key hardware resources include:  
+
+- GPU Compute Nodes with 2x AMD EPYC 7763 64-Core processors and 4x NVIDIA A100 80GB per node with 500GB of memory available per node optimized for AI/ML workflows, deep learning training, and accelerated computing. 
+- CPU Compute Nodes with 2x AMD EPYC 7763 64-Core processors with 500GB of memory available per node. 
+- High-Memory CPU Compute Nodes with 2x AMD EPYC 7763 64-Core CPUs with hyperthreading enabled and 2TB of memory available per node for memory-intensive tasks such as genome assembly, large-scale simulations, or in-memory data processing. 
+- 35 total nodes.  
+- 2944 total CPU cores. 
+- 3PD of total storage. 
+
+**How do I cite Riviera?** 
+
+If you are using or have used Riviera as part of published work, special talk, or other publishing materials, please acknowledge Riviera support in your research. This will help us to continue to support CSU research as well as highlight work done on the HPC. Here are a couple of example citations: 
+
+“This work was supported in part by Colorado State University through high-performance computer time and resources provided by the Data Science Research Institute.”  
+
+“Portions of this work were performed on the Colorado State University Data Science Research Institute high performance computer Riviera.” 
+
+**How can I request troubleshooting help or schedule a HPC consultation?**
+
+If you need assistance, you can take advantage of a few support options. Contact dsri_riviera_help@colostate.edu for support and troubleshooting about the Riviera cluster. You can request an HPC consultation by filling out the form to discuss your project needs, optimize performance, or plan resource allocations. Riviera is supported by a Documentation Website that provides quick-start guides, SBATCH script examples, software module help, and have useful links to the DSRI YouTube channel for more information about the Riviera cluster. 
