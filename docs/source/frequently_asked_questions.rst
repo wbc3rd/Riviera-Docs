@@ -36,8 +36,10 @@ Riviera supports up to 500GB of storage in your home directory. Please contact d
 
 **How do I request interactive time?**
 
-To request interactive time on a compute node, use:  
+To request interactive time on a compute node, use: 
 
-srun - -pty bash 
+.. code-block:: bash
+
+  srun - -pty bash 
 
 This allocates an interactive session on a compute node where you can run commands and programs directly. 
