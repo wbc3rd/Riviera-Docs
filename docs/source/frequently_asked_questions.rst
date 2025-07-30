@@ -4,7 +4,7 @@ Frequently Asked Questions
 
 To request a Riviera account, go to the `Riviera Website <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ and fill out the access survey located at the bottom of the page.
 
-**Who can access the riviera cluster?** 
+**Who can access the Riviera cluster?** 
 
 Access to Riviera is open to all Colorado State University (CSU) researchers and students. Whether you’re a faculty member leading a large research project, a graduate student developing machine learning models, or an undergraduate student exploring data science, you are eligible to use the Riviera cluster. This is provided that your work aligns with academic or research objectives. Access is managed by the Data Science Research Institute and must agree to the HPC usage policies. 
 
