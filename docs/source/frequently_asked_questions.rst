@@ -84,3 +84,38 @@ To request interactive time on a compute node, use:
   srun - -pty bash 
 
 This allocates an interactive session on a compute node where you can run commands and programs directly. 
+
+**How do I install Miniconda?**
+
+Download miniconda using wget to download Miniconda installer from the Anaconda repository: 
+
+.. code-block:: bash
+
+  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh 
+
+Make the installer executable: 
+
+.. code-block:: bash
+
+  chmod u+x Miniconda3-latest-Linux-x86_64.sh 
+
+Run it: 
+
+.. code-block:: bash
+
+  ./Miniconda3-latest-Linux-x86_64.sh 
+
+Follow the installation prompts: 
+
+- Press Enter to continue with installation 
+- Scroll through and accept the license terms 
+- Confirm the installation location (default: /nfs/home/username/miniconda3) 
+- Say yes when asked to initialize conda in your shell profile 
+
+Activate conda: 
+
+.. code-block:: bash
+
+  source ~/.bashrc 
+
+You should now see (base) in your command prompt, indicating conda is active. 
