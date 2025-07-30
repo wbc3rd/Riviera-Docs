@@ -3,7 +3,15 @@ Slurm
 
 What is Slurm?
 --------------
-Slurm is the job scheduling and workload manager system run by Riviera. It enables users to schedule tasks using SBATCH scripts or to run on a compute node interactively. To run an SBATCH script a user executes the command ``sbatch job_script.sh``. To run interactively you execute the command ``srun --partition=short-cpu --pty bash``, short-cpu is the default partition to run on but any partition can be specified depending on the resources needed. Once this command is run you will be running all further commands on the node selected until exiting using the command ``exit``. 
+Slurm is the job scheduling and workload manager system run by Riviera. It enables users to schedule tasks using SBATCH scripts or to run on a compute node interactively. 
+
+Running SBATCH Scripts
+^^^^^^^^^^^^^^^^^^^^^^
+To run an SBATCH script a user executes the command ``sbatch job_script.sh``. 
+
+Running Interactively
+^^^^^^^^^^^^^^^^^^^^^
+To run interactively you execute the command ``srun --partition=short-cpu --pty bash``, short-cpu is the default partition to run on but any partition can be specified depending on the resources needed. Once this command is run you will be running all further commands on the node selected until exiting using the command ``exit``. 
 
 Creating a Slurm SBATCH script
 ------------------------------

@@ -3,6 +3,7 @@ Frequently Asked Questions
 **How do I request a Riviera account?** 
 
 To request a Riviera account, go to the `Riviera Website <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ and fill out the access survey located at the bottom of the page.
+
 **Who can access the riviera cluster?** 
 
 Access to Riviera is open to all Colorado State University (CSU) researchers and students. Whether you’re a faculty member leading a large research project, a graduate student developing machine learning models, or an undergraduate student exploring data science, you are eligible to use the Riviera cluster. This is provided that your work aligns with academic or research objectives. Access is managed by the Data Science Research Institute and must agree to the HPC usage policies. 
@@ -36,54 +37,15 @@ Riviera supports up to 500GB of storage in your home directory. Please contact d
 
 **How do I request interactive time?**
 
-To request interactive time on a compute node, use: 
-
-.. code-block:: bash
-
-  srun - -pty bash 
-
-This allocates an interactive session on a compute node where you can run commands and programs directly. 
+See 'Running Interactively <https://riviera-docs.readthedocs.io/en/latest/slurm.html#running-interactively>'_ in the `Slurm Overview <https://riviera-docs.readthedocs.io/en/latest/slurm.html#>`_ for information on running interactively.
 
 **How can I transfer data from my local computer to the cluster?** 
 
-You need a secure file transfer. You can use scp (secure copy) from the terminal for small file transfers: 
-
-.. code-block:: bash
-
-  # Transfer a single file 
-
-  scp   /path/to/your/file  username@rivirera.colostate.edu:/nfs/home/username/ 
-
-  # Transfer a directory 
-
-  scp  -r  /path/to/your/file  username@rivirera.colostate.edu:/nfs/home/username/ 
-
-Replace username with your cluster username and /path/to/your/file with the file path to the file or directory you want to send. 
-
-
-If you want to send large files, you could use rsync: 
-
-.. code-block:: bash
-
-  rsync  -avz  /path/to/your/file username@rivirera.colostate.edu:/nfs/home/username/ 
+See `Data Transfer and File Management <https://riviera-docs.readthedocs.io/en/latest/data_transfer.html>`_ for information on how to transfer data on and off the cluster.
 
 **How do I access scratch space on the riviera cluster?**
 
-You can access scratch space on the Riviera cluster locally using the command: 
-
-.. code-block:: bash
-
-  df -h	 
-
-**How do I request interactive time?**
-
-To request interactive time on a compute node, use:  
-
-.. code-block:: bash
-
-  srun - -pty bash 
-
-This allocates an interactive session on a compute node where you can run commands and programs directly. 
+It is possible to view the available file systems and storage capacities by running ``df -h`` while running interactively on the node you want to use. From there you can transfer data to the local scratch space (``/home``) on the node you are using with the ``mv`` or ``cp`` commands and direct your programs to use those directories for file storage.
 
 **How do I install Miniconda?**
 
