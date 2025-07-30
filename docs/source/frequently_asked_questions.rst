@@ -43,3 +43,26 @@ To request interactive time on a compute node, use:
   srun - -pty bash 
 
 This allocates an interactive session on a compute node where you can run commands and programs directly. 
+
+**How can I transfer data from my local computer to the cluster?** 
+
+You need a secure file transfer. You can use scp (secure copy) from the terminal for small file transfers: 
+
+.. code-block:: bash
+
+  # Transfer a single file 
+
+  scp   /path/to/your/file  username@rivirera.colostate.edu:/nfs/home/username/ 
+
+  # Transfer a directory 
+
+  scp  -r  /path/to/your/file  username@rivirera.colostate.edu:/nfs/home/username/ 
+
+Replace username with your cluster username and /path/to/your/file with the file path to the file or directory you want to send. 
+
+
+If you want to send large files, you could use rsync: 
+
+.. code-block:: bash
+
+  rsync  -avz  /path/to/your/file username@rivirera.colostate.edu:/nfs/home/username/ 
