@@ -41,7 +41,7 @@ See 'Running Interactively <https://riviera-docs.readthedocs.io/en/latest/slurm.
 
 **How can I transfer data from my local computer to the cluster?** 
 
-See `Data Transfer and File Management <https://riviera-docs.readthedocs.io/en/latest/data_transfer.html>`_ for information on how to transfer data on and off the cluster.
+See `Data Transfer and File Management <https://riviera-docs.readthedocs.io/en/latest/data_transfer.html>`_ for information on how to transfer data on and off of the cluster.
 
 **How do I access scratch space on the riviera cluster?**
 
