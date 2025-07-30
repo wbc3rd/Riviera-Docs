@@ -74,3 +74,13 @@ You can access scratch space on the Riviera cluster locally using the command:
 .. code-block:: bash
 
   df -h	 
+
+**How do I request interactive time?**
+
+To request interactive time on a compute node, use:  
+
+.. code-block:: bash
+
+  srun - -pty bash 
+
+This allocates an interactive session on a compute node where you can run commands and programs directly. 
