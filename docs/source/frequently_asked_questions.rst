@@ -29,3 +29,11 @@ If you are using or have used Riviera as part of published work, special talk, o
 **How can I request troubleshooting help or schedule a HPC consultation?**
 
 If you need assistance, you can take advantage of a few support options. Contact `dsri_riviera_help@colostate.edu` for support and troubleshooting about the Riviera cluster. You can request an HPC consultation by `filling out the form <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ to discuss your project needs, optimize performance, or plan resource allocations. Riviera is supported by a Documentation Website that provides quick-start guides, SBATCH script examples, software module help, and have useful links to the `DSRI YouTube channel <https://www.youtube.com/@DataScienceResearchInstitute>`_ for more information about the Riviera cluster. 
+
+**How do I request interactive time?**
+
+To request interactive time on a compute node, use:  
+
+srun - -pty bash 
+
+This allocates an interactive session on a compute node where you can run commands and programs directly. 
