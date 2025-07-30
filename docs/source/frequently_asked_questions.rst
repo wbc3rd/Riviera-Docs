@@ -66,3 +66,11 @@ If you want to send large files, you could use rsync:
 .. code-block:: bash
 
   rsync  -avz  /path/to/your/file username@rivirera.colostate.edu:/nfs/home/username/ 
+
+**How do I access scratch space on the riviera cluster?**
+
+You can access scratch space on the Riviera cluster locally using the command: 
+
+.. code-block:: bash
+
+  df -h	 
