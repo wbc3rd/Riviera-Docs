@@ -45,7 +45,7 @@ See `Data Transfer and File Management <https://riviera-docs.readthedocs.io/en/l
 
 **How do I access scratch space on the riviera cluster?**
 
-It is possible to view the available file systems and storage capacities by running ``df -h`` while running interactively on the node you want to use. From there you can transfer data to the local scratch space (``/home``) on the node you are using with the ``mv`` or ``cp`` commands and direct your programs to use those directories for file storage.
+It is possible to view the available file systems and storage capacities by running ``df -h`` while running interactively on the node you want to use. From there you can transfer data to the local scratch space (``/local``) on the node you are using with the ``mv`` or ``cp`` commands and direct your programs to use those directories for file storage.
 
 **How do I install Miniconda?**
 
