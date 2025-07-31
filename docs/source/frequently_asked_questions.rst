@@ -61,6 +61,8 @@ Frequently Asked Questions
 
         sbatch my_job_script.sh 
 
+    For more information, please see the 'Slurm <https://riviera-docs.readthedocs.io/en/latest/slurm.html>'_ page on running and requesting a compute node.
+
 .. dropdown:: How can I transfer data from my local computer to the cluster?
 
   See `Data Transfer and File Management <https://riviera-docs.readthedocs.io/en/latest/data_transfer.html>`_ for information on how to transfer data on and off of the cluster.
