@@ -1,23 +1,24 @@
 Frequently Asked Questions
 ===========================
-**How do I request a Riviera account?** 
-
-To request a Riviera account, go to the `Riviera Website <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ and fill out the access survey located at the bottom of the page.
-
-**Who can access the Riviera cluster?** 
-
-Access to Riviera is open to all Colorado State University (CSU) researchers and students. Whether you’re a faculty member leading a large research project, a graduate student developing machine learning models, or an undergraduate student exploring data science, you are eligible to use the Riviera cluster. This is provided that your work aligns with academic or research objectives. Access is managed by the Data Science Research Institute and must agree to the HPC usage policies. 
-
-**What compute resources does Riviera offer?**
-
-Riviera provides state-of-the-art computational capabilities tailored to the needs of modern research, particularly in AI and bioinformatics. Key hardware resources include:  
-
-- GPU Compute Nodes with 2x AMD EPYC 7763 64-Core processors and 4x NVIDIA A100 80GB per node with 500GB of memory available per node optimized for AI/ML workflows, deep learning training, and accelerated computing. 
-- CPU Compute Nodes with 2x AMD EPYC 7763 64-Core processors with 500GB of memory available per node. 
-- High-Memory CPU Compute Nodes with 2x AMD EPYC 7763 64-Core CPUs with hyperthreading enabled and 2TB of memory available per node for memory-intensive tasks such as genome assembly, large-scale simulations, or in-memory data processing. 
-- 35 total nodes.  
-- 2944 total CPU cores. 
-- 3PB of total storage. 
+.. toggle::
+    **Q: How do I request a Riviera account?** 
+    
+    To request a Riviera account, go to the `Riviera Website <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ and fill out the access survey located at the bottom of the page.
+    
+    **Who can access the Riviera cluster?** 
+    
+    Access to Riviera is open to all Colorado State University (CSU) researchers and students. Whether you’re a faculty member leading a large research project, a graduate student developing machine learning models, or an undergraduate student exploring data science, you are eligible to use the Riviera cluster. This is provided that your work aligns with academic or research objectives. Access is managed by the Data Science Research Institute and must agree to the HPC usage policies. 
+    
+    **What compute resources does Riviera offer?**
+    
+    Riviera provides state-of-the-art computational capabilities tailored to the needs of modern research, particularly in AI and bioinformatics. Key hardware resources include:  
+    
+    - GPU Compute Nodes with 2x AMD EPYC 7763 64-Core processors and 4x NVIDIA A100 80GB per node with 500GB of memory available per node optimized for AI/ML workflows, deep learning training, and accelerated computing. 
+    - CPU Compute Nodes with 2x AMD EPYC 7763 64-Core processors with 500GB of memory available per node. 
+    - High-Memory CPU Compute Nodes with 2x AMD EPYC 7763 64-Core CPUs with hyperthreading enabled and 2TB of memory available per node for memory-intensive tasks such as genome assembly, large-scale simulations, or in-memory data processing. 
+    - 35 total nodes.  
+    - 2944 total CPU cores. 
+    - 3PB of total storage. 
 
 **How do I cite Riviera?** 
 
