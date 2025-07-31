@@ -39,6 +39,28 @@ Frequently Asked Questions
 
   See `Running Interactively <https://riviera-docs.readthedocs.io/en/latest/slurm.html#running-interactively>`_ in the `Slurm Overview <https://riviera-docs.readthedocs.io/en/latest/slurm.html#>`_ for information on running interactively.
 
+.. dropdown:: How do I request a compute node? 
+
+    There are several ways to request compute node in Riviera. 
+
+    For interactive work and default:
+
+    .. code-block:: bash
+
+        srun - -pty bash 
+
+    You can also specify resources: 
+
+    .. code-block:: bash
+
+        srun - -pty   - -time=02:00:00   - -mem=8G - -cpus-per-task=4 bash  
+
+    For longer-running or scheduled jobs, create a script and submit with sbatch 
+
+    .. code-block:: bash
+
+        sbatch my_job_script.sh 
+
 .. dropdown:: How can I transfer data from my local computer to the cluster?
 
   See `Data Transfer and File Management <https://riviera-docs.readthedocs.io/en/latest/data_transfer.html>`_ for information on how to transfer data on and off of the cluster.
