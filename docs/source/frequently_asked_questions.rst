@@ -39,11 +39,11 @@ Frequently Asked Questions
 
   See `Running Interactively <https://riviera-docs.readthedocs.io/en/latest/slurm.html#running-interactively>`_ in the `Slurm Overview <https://riviera-docs.readthedocs.io/en/latest/slurm.html#>`_ for information on running interactively.
 
-  **How can I transfer data from my local computer to the cluster?** 
+.. dropdown:: How can I transfer data from my local computer to the cluster?
 
   See `Data Transfer and File Management <https://riviera-docs.readthedocs.io/en/latest/data_transfer.html>`_ for information on how to transfer data on and off of the cluster.
 
-  **How do I access scratch space on the riviera cluster?**
+.. dropdown:: How do I access scratch space on the riviera cluster?
 
   It is possible to view the available file systems and storage capacities by running ``df -h`` while running interactively on the node you want to use. From there you can transfer data to the local scratch space (``/local``) on the node you are using with the ``mv`` or ``cp`` commands and direct your programs to use those directories for file storage.
 
