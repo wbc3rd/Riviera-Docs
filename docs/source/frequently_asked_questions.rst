@@ -20,6 +20,7 @@ Frequently Asked Questions
     - 3PB of total storage. 
 
 .. dropdown:: How do I cite Riviera?
+
     If you are using or have used Riviera as part of published work, special talk, or other publishing materials, please acknowledge Riviera support in your research. This will help us to continue to support CSU research as well as highlight work done on the HPC. Here are a couple of example citations: 
 
     “This work was supported in part by Colorado State University through high-performance computer time and resources provided by the Data Science Research Institute.”  
@@ -28,55 +29,55 @@ Frequently Asked Questions
 
 .. dropdown:: How can I request troubleshooting help or schedule a HPC consultation?
 
-If you need assistance, you can take advantage of a few support options. Contact dsri_riviera_help@colostate.edu for support and troubleshooting about the Riviera cluster. You can request an HPC consultation by `filling out the form <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ to discuss your project needs, optimize performance, or plan resource allocations. Riviera is supported by a Documentation Website that provides quick-start guides, SBATCH script examples, software module help, and have useful links to the `DSRI YouTube channel <https://www.youtube.com/@DataScienceResearchInstitute>`_ for more information about the Riviera cluster. 
+  If you need assistance, you can take advantage of a few support options. Contact dsri_riviera_help@colostate.edu for support and troubleshooting about the Riviera cluster. You can request an HPC consultation by `filling out the form <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ to discuss your project needs, optimize performance, or plan resource allocations. Riviera is supported by a Documentation Website that provides quick-start guides, SBATCH script examples, software module help, and have useful links to the `DSRI YouTube channel <https://www.youtube.com/@DataScienceResearchInstitute>`_ for more information about the Riviera cluster. 
 
 .. dropdown:: How much data can I store in my home directory?
 
-Riviera supports up to 500GB of storage in your home directory. Please contact dsri_riviera_help@colostate.edu for more information or concerns. 
+  Riviera supports up to 500GB of storage in your home directory. Please contact dsri_riviera_help@colostate.edu for more information or concerns. 
 
 .. dropdown:: How do I request interactive time?
 
-See `Running Interactively <https://riviera-docs.readthedocs.io/en/latest/slurm.html#running-interactively>`_ in the `Slurm Overview <https://riviera-docs.readthedocs.io/en/latest/slurm.html#>`_ for information on running interactively.
+  See `Running Interactively <https://riviera-docs.readthedocs.io/en/latest/slurm.html#running-interactively>`_ in the `Slurm Overview <https://riviera-docs.readthedocs.io/en/latest/slurm.html#>`_ for information on running interactively.
 
-**How can I transfer data from my local computer to the cluster?** 
+  **How can I transfer data from my local computer to the cluster?** 
 
-See `Data Transfer and File Management <https://riviera-docs.readthedocs.io/en/latest/data_transfer.html>`_ for information on how to transfer data on and off of the cluster.
+  See `Data Transfer and File Management <https://riviera-docs.readthedocs.io/en/latest/data_transfer.html>`_ for information on how to transfer data on and off of the cluster.
 
-**How do I access scratch space on the riviera cluster?**
+  **How do I access scratch space on the riviera cluster?**
 
-It is possible to view the available file systems and storage capacities by running ``df -h`` while running interactively on the node you want to use. From there you can transfer data to the local scratch space (``/local``) on the node you are using with the ``mv`` or ``cp`` commands and direct your programs to use those directories for file storage.
+  It is possible to view the available file systems and storage capacities by running ``df -h`` while running interactively on the node you want to use. From there you can transfer data to the local scratch space (``/local``) on the node you are using with the ``mv`` or ``cp`` commands and direct your programs to use those directories for file storage.
 
 .. dropdown:: How do I install Miniconda?
 
-Download miniconda using wget to download Miniconda installer from the Anaconda repository: 
+  Download miniconda using wget to download Miniconda installer from the Anaconda repository: 
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh 
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh 
 
-Make the installer executable: 
+  Make the installer executable: 
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  chmod u+x Miniconda3-latest-Linux-x86_64.sh 
+    chmod u+x Miniconda3-latest-Linux-x86_64.sh 
 
-Run it: 
+  Run it: 
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  ./Miniconda3-latest-Linux-x86_64.sh 
+    ./Miniconda3-latest-Linux-x86_64.sh 
 
-Follow the installation prompts: 
+  Follow the installation prompts: 
 
-- Press Enter to continue with installation 
-- Scroll through and accept the license terms 
-- Confirm the installation location (default: /nfs/home/username/miniconda3) 
-- Say yes when asked to initialize conda in your shell profile 
+  - Press Enter to continue with installation 
+  - Scroll through and accept the license terms 
+  - Confirm the installation location (default: /nfs/home/username/miniconda3) 
+  - Say yes when asked to initialize conda in your shell profile 
 
-Activate conda: 
+  Activate conda: 
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  source ~/.bashrc 
+    source ~/.bashrc 
 
-You should now see (base) in your command prompt, indicating conda is active. 
+  You should now see (base) in your command prompt, indicating conda is active. 
