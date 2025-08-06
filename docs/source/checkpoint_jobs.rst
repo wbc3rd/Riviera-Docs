@@ -109,3 +109,38 @@ SLURM job Script with Checkpointing
             echo "Job completed successfully"
         else
             echo "Job was interrupted - checkpoint should allow restart"
+
+
+SRUN Checkpointing Options
+--------------------------
+``srun`` provides several options to support checkpoint and restart functionality for job steps:
+
+- ``--checkpoint``: Sets the time interval for automatically creating checkpoint images during a job step. By default, no checkpoints are created. Valid formats for this interval include:
+
+  - ``"minutes"``
+
+  - ``"minutes:seconds"``
+
+  - ``"hours:minutes:seconds"``
+
+  - ``"days-hours"``
+
+  - ``"days-hours:minutes"``
+
+  - ``"days-hours:minutes:seconds"``
+
+- ``--checkpoint-dir``: Specifies the directory where checkpoint files for the job step will be saved. If not set, the current working directory is used by default. Checkpoint files are named as follows:
+
+  - For entire jobs: ``<job_id>.ckpt``
+
+  - For specific job steps: ``<job_id>.<step_id>.ckpt``
+
+- ``--restart-dir``: Indicates the directory from which checkpoint files should be read when restarting a job step.
+
+Each of these options also has a corresponding environment variable:
+
+- ``SLURM_CHECKPOINT`` = ``--checkpoint``
+- ``SLURM_CHECKPOINT_DIR`` = ``--checkpoint-dir``
+- ``SLURM_RESTART_DIR`` = ``--restart-dir``
+
+In addition, the variable ``SLURM_SRUN_CR_SOCKET`` is used internally to allow job step logic to communicate with the ``srun_cr`` command.
