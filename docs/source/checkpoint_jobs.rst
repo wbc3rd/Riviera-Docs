@@ -42,7 +42,7 @@ If your software does not have bult-in checkpointing, here's a minimal example:
 
 .. tabs:: 
 
-   .. tab:: Python
+   .. tab:: Python code example
 
     .. code-block:: python
 
@@ -92,11 +92,7 @@ If your software does not have bult-in checkpointing, here's a minimal example:
             # Your actual computation
             return i ** 2
 
-SLURM job Script with Checkpointing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. tabs::
-
-  .. tab:: Slurm
+  .. tab:: SBatch job script
 
     .. code-block:: bash
 
