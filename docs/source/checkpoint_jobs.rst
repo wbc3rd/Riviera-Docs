@@ -40,8 +40,10 @@ Simple Manual Checkpointing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If your software does not have bult-in checkpointing, here's a minimal example:
 
-.. tabs:: python
+.. tabs:: Python
+
     .. code-block:: python
+
         import pickle
         import os
 
@@ -90,8 +92,10 @@ If your software does not have bult-in checkpointing, here's a minimal example:
 
 SLURM job Script with Checkpointing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. tabs:: python
-    .. code-block:: python
+.. tabs:: Slurm
+
+    .. code-block:: bash
+
         #!/bin/bash
         #SBATCH --job-name=my_checkpointed_job
         #SBATCH --time=02:00:00
