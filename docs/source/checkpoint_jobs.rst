@@ -29,8 +29,8 @@ Checkpointing can be implemented in several ways:
 Quick Start Guide
 -----------------
 
-Check if Your Software Already Supports Checkpointing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Check if Software Already Supports Checkpointing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - **Machine Leraning:** TensorFlow ``tf.keras.callbacks.ModelCheckpoint``, Pytorch ``torch.save/load``
 - **Molecular Dynammics:** GROMACS (``-cpi`` flag), LAMMPS (``restart`` command)
@@ -89,7 +89,7 @@ Here is a basic example for manually checkpointing with Python and SBatch using 
                 save_checkpoint(checkpoint_data)
 
         def compute_something(i):
-            # Your actual computation
+            # Computation
             return i ** 2
 
   .. tab:: SBatch
