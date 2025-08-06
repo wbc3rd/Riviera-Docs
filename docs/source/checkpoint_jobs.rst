@@ -144,3 +144,27 @@ Each of these options also has a corresponding environment variable:
 - ``SLURM_RESTART_DIR`` = ``--restart-dir``
 
 In addition, the variable ``SLURM_SRUN_CR_SOCKET`` is used internally to allow job step logic to communicate with the ``srun_cr`` command.
+
+SBATCH Checkpointing Options
+----------------------------
+``sbatch`` supports checkpoint and restart functionality through the following options:
+
+- ``--checkpoint``: Defines the interval for creating periodic checkpoints of a batch job. By default, no checkpoints are created. Valid time formats include:
+
+  - ``"minutes"``
+  - ``"minutes:seconds"``
+  - ``"hours:minutes:seconds"``
+  - ``"days-hours"``
+  - ``"days-hours:minutes"``
+  - ``"days-hours:minutes:seconds"``
+
+- ``--checkpoint-dir``: Specifies the directory where checkpoint image files for the batch job will be stored. If not provided, the default is the current working directory. Checkpoint files follow this naming format:
+  
+  - For full jobs: ``<job_id>.ckpt``
+  - For job steps: ``<job_id>.<step_id>.ckpt``
+
+Environment variables can be used in place of the command-line options:
+
+- ``SLURM_CHECKPOINT`` is equivalent to ``--checkpoint``
+- ``SLURM_CHECKPOINT_DIR`` is equivalent to ``--checkpoint-dir``
+
