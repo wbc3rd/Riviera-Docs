@@ -38,11 +38,11 @@ Check if Your Software Already Supports Checkpointing
 
 Simple Manual Checkpointing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If your software does not have bult-in checkpointing, here's a minimal example:
+Here is a basic example for manually checkpointing with Python and SBatch using the pickle python package.
 
 .. tabs:: 
 
-   .. tab:: Python code example
+   .. tab:: Python
 
     .. code-block:: python
 
@@ -92,7 +92,7 @@ If your software does not have bult-in checkpointing, here's a minimal example:
             # Your actual computation
             return i ** 2
 
-  .. tab:: SBatch job script
+  .. tab:: SBatch
 
     .. code-block:: bash
 
