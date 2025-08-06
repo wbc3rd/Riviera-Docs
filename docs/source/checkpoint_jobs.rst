@@ -3,6 +3,9 @@ Checkpointing Jobs
 
 Checkpointing is the process of periodically saving a job’s progress by capturing its current state or key values. This allows a job to resume from the last saved point instead of starting over in the event of an interruption.
 
+Checkpoint Usage
+----------------
+
 Checkpoints are useful for recovering from:
 
 - Hardware or node failures
@@ -14,6 +17,9 @@ They can also be used for:
 
 - Debugging purposes
 - Monitoring the internal state of a running program
+
+Implementing Checkpoints
+------------------------
 
 Checkpointing can be implemented in several ways:
 
