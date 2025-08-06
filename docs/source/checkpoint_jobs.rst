@@ -40,7 +40,9 @@ Simple Manual Checkpointing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If your software does not have bult-in checkpointing, here's a minimal example:
 
-.. tabs:: Python
+.. tabs:: 
+
+   .. tab:: Python
 
     .. code-block:: python
 
@@ -92,7 +94,9 @@ If your software does not have bult-in checkpointing, here's a minimal example:
 
 SLURM job Script with Checkpointing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. tabs:: Slurm
+.. tabs::
+
+  .. tab:: Slurm
 
     .. code-block:: bash
 
