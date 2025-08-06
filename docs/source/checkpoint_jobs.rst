@@ -3,8 +3,8 @@ Checkpointing Jobs
 
 Checkpointing is the process of periodically saving a job’s progress by capturing its current state or key values. This allows a job to resume from the last saved point instead of starting over in the event of an interruption. This is a crucial feature for long-running computational tasks, especially in High-performance Computing(HPC) environments.
 
-Why Use Checkpoints
--------------------
+Checkpoint Usage
+----------------
 
 Checkpoints are useful for recovering from:
 
@@ -20,12 +20,11 @@ They can also be used for:
 
 Implementing Checkpoints
 ------------------------
-
 Checkpointing can be implemented in several ways:
 
 - **Language-level support:** Some programming languages offer built-in features to save a program’s state when it is paused or preempted, allowing it to resume later. However, these features typically do not support recovery from full job failures or crashes.
-- **Workflow management checkpointing:** Tools like Snakemake and Nextflow support checkpointing by organizing job steps into a Directed Acyclic Graph (DAG). Checkpoints can be assigned to specific nodes within the graph, enabling partial progress to be saved and resumed efficiently.
-- **User-Level(Manual) checkpointing:** In a do-it-yourself (DIY) approach, users can periodically write important data or intermediate results to a file at key stages of the job. This manual method provides flexibility and is especially useful when no automated checkpointing support is available.
+- **Workflow management tools:** Tools like Snakemake and Nextflow support checkpointing by organizing job steps into a Directed Acyclic Graph (DAG). Checkpoints can be assigned to specific nodes within the graph, enabling partial progress to be saved and resumed efficiently.
+- **Manual checkpointing:** In a do-it-yourself (DIY) approach, users can periodically write important data or intermediate results to a file at key stages of the job. This manual method provides flexibility and is especially useful when no automated checkpointing support is available.
 
 Quick Start Guide
 -----------------
