@@ -92,7 +92,7 @@ Here is a basic example for manually checkpointing with Python and SBatch using 
             # Computation
             return i ** 2
 
-  .. tab:: SBatch
+  .. tab:: checkpointed-program.sh
 
     .. code-block:: bash
 
