@@ -42,7 +42,7 @@ Here is a basic example for manually checkpointing with Python and SBatch using 
 
 .. tabs:: 
 
-   .. tab:: Python
+   .. tab:: checkpointed_program.py
 
     .. code-block:: python
 
@@ -106,7 +106,7 @@ Here is a basic example for manually checkpointing with Python and SBatch using 
         module load python/3.8
 
         # Run your checkpointed program
-        python my_checkpointed_program.py
+        python checkpointed_program.py
 
         # Check if job finished or was interrupted
         if [ $? -eq 0 ]; then
