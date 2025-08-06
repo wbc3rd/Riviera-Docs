@@ -1,7 +1,7 @@
 Checkpointing Jobs
 ==================
 
-Checkpointing is the process of periodically saving a job’s progress by capturing its current state or key values. This allows a job to resume from the last saved point instead of starting over in the event of an interruption. This is a crucial feature for long-running computational tasks, especially in High-performance Computing(HPC) environments.
+Checkpointing is the process of periodically saving a job’s progress by capturing its current state or key values. This allows a job to resume from the last saved point instead of starting over in the event of an interruption. This is a crucial feature for long-running computational tasks, especially in High-performance Computing (HPC) environments.
 
 Why Use Checkpoints
 -------------------
