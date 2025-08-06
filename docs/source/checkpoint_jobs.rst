@@ -172,3 +172,38 @@ Environment variables can be used in place of the command-line options:
 - ``SLURM_CHECKPOINT`` is equivalent to ``--checkpoint``
 - ``SLURM_CHECKPOINT_DIR`` is equivalent to ``--checkpoint-dir``
 
+SCONTROL
+--------
+``scontrol`` is used to initiate checkpoint and restart requests.
+
+Create a Checkpoint
+^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+   scontrol checkpoint create <jobid> [ImageDir=<dir>] [MaxWait=<seconds>]
+
+- Requests a checkpoint for the specified job.
+- If only a job ID is provided, all associated job steps will be checkpointed.
+- If the job ID corresponds to a batch job, the entire job is checkpointed. This includes the batch shell and all running tasks from all job steps.
+- The task launch command must propagate the checkpoint request to any tasks it initiates.
+- ``ImageDir`` specifies the directory where checkpoint image files will be saved. If provided, this overrides any ``--checkpoint-dir`` setting used at job submission.
+- ``MaxWait`` sets the maximum duration (in seconds) allowed for the checkpoint operation. If the checkpoint is not completed within this time, the request is considered failed.
+
+.. code-block:: bash
+
+   scontrol checkpoint create <jobid.stepid> [ImageDir=<dir>] [MaxWait=<seconds>]
+
+- Requests a checkpoint for a specific job step only.
+
+Restart from a Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+   scontrol checkpoint restart <jobid> [ImageDir=<dir>] [StickToNodes]
+
+- Restarts a previously checkpointed batch job.
+- ``ImageDir`` specifies the location of the checkpoint image files to restore from.
+- ``StickToNodes`` ensures the job restarts on the same nodes it was originally checkpointed on.
+
