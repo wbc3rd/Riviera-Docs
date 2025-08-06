@@ -1,3 +1,3 @@
-Ways to Checkpoint Jobs
-=======================
+Checkpointing Jobs
+==================
 
