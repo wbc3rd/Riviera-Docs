@@ -56,10 +56,10 @@ Best Practices
 - Release GPUs as soon as your job is done. 
 - Store model checkpoints periodically (see `Checkpointing <https://riviera-docs.readthedocs.io/en/latest/checkpoint_jobs.html>`_).
 
-Dos and Don't
+Do and Don't
 -------------
 
-.. list-table:: GPU Usage Dos and Don't
+.. list-table:: GPU Usage Do and Don't
     :header-rows: 1
     :widths: 40 60
 
