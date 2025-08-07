@@ -44,6 +44,7 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
    :caption: Cluster Etiquette
 
    prohibited_actions
+   gpu_usage
 
 .. toctree::
    :caption: Linux for HPC
