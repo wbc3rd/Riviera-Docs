@@ -17,6 +17,7 @@ Requesting a GPU in Slurm
 To use a GPU in a job, you must request it in your Slurm job script:
 
 .. code-block:: bash
+
    #!/bin/bash
    #SBATCH --job-name=MyGPUJob
    #SBATCH --partition=gpu
@@ -72,3 +73,11 @@ Dos and Don't
       - Leave jobs idle on GPU nodes
     * - Use time limits appropriatley
       - Request more GPUs than necessary
+
+When Code is not Using GPU Effectively
+--------------------------------------
+- GPU utilization is consistently below 50%
+- High CPU usage with low GPU usage
+- More time spent in memory transfer than computation
+- Sequential operations that could be parallelized
+- Algorithm not suited for GPU architecture (highly branching, irregular memory access)
