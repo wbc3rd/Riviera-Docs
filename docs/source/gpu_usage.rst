@@ -32,6 +32,13 @@ To use a GPU in a job, you must request it in your Slurm job script:
    # Run your application
    srun my_gpu_application.py
 
+
+GPU Node Types and Partitions
+-----------------------------
+- Short GPU jobs: ``--partition=short-gpu``
+- Standard GPU jobs: ``--partition=gpu``
+- Long GPU jobs: ``--partition=long-gpu``
+
 Available GPU Resources
 -----------------------
 
