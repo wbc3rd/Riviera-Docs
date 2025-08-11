@@ -11,6 +11,18 @@ When to Use a GPU
 - If you need significantly faster matrix operations or rendering performance.
 - If your software documentation explicitly mention GPU support.
 
+GPU Node Types and Partitions
+-----------------------------
+- Short GPU jobs: ``--partition=short-gpu``
+- Standard GPU jobs: ``--partition=gpu``
+- Long GPU jobs: ``--partition=long-gpu``
+
+Available GPU Resources
+-----------------------
+
+- **2 AMD EPYC 7763 64-Core Processor** without hyperthreading GPU-enabled
+- **4 NVIDIA A100 80GB Graphic cards**
+
 Requesting a GPU in Slurm 
 -------------------------
 
@@ -32,18 +44,6 @@ To use a GPU in a job, you must request it in your Slurm job script:
    # Run your application
    srun my_gpu_application.py
 
-
-GPU Node Types and Partitions
------------------------------
-- Short GPU jobs: ``--partition=short-gpu``
-- Standard GPU jobs: ``--partition=gpu``
-- Long GPU jobs: ``--partition=long-gpu``
-
-Available GPU Resources
------------------------
-
-- **2 AMD EPYC 7763 64-Core Processor** without hyperthreading GPU-enabled
-- **4 NVIDIA A100 80GB Graphic cards**
 
 Monitoring GPU Usage
 --------------------
