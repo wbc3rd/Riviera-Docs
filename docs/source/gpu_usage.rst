@@ -56,6 +56,13 @@ Best Practices
 - Release GPUs as soon as your job is done. 
 - Store model checkpoints periodically (see `Checkpointing <https://riviera-docs.readthedocs.io/en/latest/checkpoint_jobs.html>`_).
 
+GPU Fair Useage
+---------------
+
+- Do not run interactive notebooks for long periods on GPU nodes. Use batch jobs.
+- Cancel jobs if they are stuck or underutilizing GPUs.
+- Avoid GPU memory hoarding (free GPU memory after use).
+
 Do and Don't
 -------------
 
