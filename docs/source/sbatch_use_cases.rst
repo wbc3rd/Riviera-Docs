@@ -260,12 +260,12 @@ CUDA
 Use Cases
 ^^^^^^^^^
 
-CUDA(Compute Unified Device Architecture) is NVIDIA's parallel computing platform and programming model for general-purpose computing on GPUs. It allows direct access to GPU hardware for high-performance computing tasks including scientific simulations, machine learning, image processing, and numerical computations. CUDA is particularly effective for problems that can be parallelized across thousands of GPU cores. CUDA works with a multitude of languages including C, C++, FORTRAN, Python, and Julia, but C++ and Python are the most common to use on Riviera. PyTorch is what is typically used for interacting with CUDA via Python and CUDA C++ is how it is interacted with via C++.
+CUDA (Compute Unified Device Architecture) is NVIDIA's parallel computing platform and programming model for general-purpose computing on GPUs. It allows direct access to GPU hardware for high-performance computing tasks including scientific simulations, machine learning, image processing, and numerical computations. CUDA is particularly effective for problems that can be parallelized across thousands of GPU cores. CUDA works with a multitude of languages including C, C++, FORTRAN, Python, and Julia, but C++ and Python are the most common to use on Riviera. PyTorch is what is typically used for interacting with CUDA via Python and CUDA C++ is how it is interacted with via C++.
 
 Overview 
 ^^^^^^^^^^
 
-CUDA is already installed on Riviera via the modules' system. CUDA is typically interfaced with via CUDA C++ which is a minimal set of extensions to the C++ language and runtime library. CUDA C++ is compiled with NVCC. CUDA C++ adds functions called *kernels* which can be executed N times in parallel by N different CUDA threads. Additionally, memory must be directly managed for the GPU with `cudaMalloc`, `cudaMemcpy`, and `cudaFree`. If data is not transferred directly to the GPU with one of these methods the GPU cannot access it.
+CUDA is already installed on Riviera via the modules' system. CUDA is typically interfaced with via CUDA C++ which is a minimal set of extensions to the C++ language and runtime library. CUDA C++ is compiled with NVCC. CUDA C++ adds functions called *kernels* which can be executed N times in parallel by N different CUDA threads. Additionally, memory must be directly managed for the GPU with ``cudaMalloc``, ``cudaMemcpy``, and ``cudaFree``. If data is not transferred directly to the GPU with one of these methods the GPU cannot access it.
 
 Examples
 ^^^^^^^^
