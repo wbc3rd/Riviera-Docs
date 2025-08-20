@@ -254,25 +254,131 @@ Example
                 return 0;
             }
 
+CUDA
+-------
+
+Use Cases
+^^^^^^^^^
+
+CUDA(Compute Unified Device Architecture) is NVIDIA's parallel computing platform and programming model for general-purpose computing on GPUs. It allows direct access to GPU hardware for high-performance computing tasks including scientific simulations, machine learning, image processing, and numerical computations. CUDA is particularly effective for problems that can be parallelized across thousands of GPU cores. CUDA works with a multitude of languages including C, C++, FORTRAN, Python, and Julia, but C++ and Python are the most common to use on Riviera. PyTorch is what is typically used for interacting with CUDA via Python and CUDA C++ is how it is interacted with via C++.
+
+Overview 
+^^^^^^^^^^
+
+CUDA is already installed on Riviera via the modules' system. CUDA is typically interfaced with via CUDA C++ which is a minimal set of extensions to the C++ language and runtime library. CUDA C++ is compiled with NVCC. CUDA C++ adds functions called *kernels* which can be executed N times in parallel by N different CUDA threads. Additionally, memory must be directly managed for the GPU with `cudaMalloc`, `cudaMemcpy`, and `cudaFree`. If data is not transferred directly to the GPU with one of these methods the GPU cannot access it.
+
+Examples
+^^^^^^^^
+
+.. tabs::
+
+    .. tab:: cuda-example.sh
+
+        .. code-block:: bash
+
+            #!/bin/bash -l
+            #SBATCH --job-name=cuda-example
+            #SBATCH --partition=short-gpu
+            #SBATCH --output=out.log
+            #SBATCH --error=error.log
+            #SBATCH --time=00:01:00
+            #SBATCH --ntasks=1
+
+            module load cuda12.2/blas/12.2.2
+            module load cuda12.2/fft/12.2.2
+            module load cuda12.2/toolkit/12.2.2
+
+            srun nvcc vector_add.cu -o vector_add # Compiles the CUDA C++ program.
+            srun time ./vector_add # Runs and times the cuda program
+
+    .. tab:: vector_add.cu
+
+        .. code-block:: Cuda
+
+            #include <stdio.h>
+            #include <stdlib.h>
+            #include <math.h>
+            #include <assert.h>
+            #include <cuda.h>
+            #include <cuda_runtime.h>
+
+            #define N 10000000
+            #define MAX_ERR 1e-6
+
+            __global__ void vector_add(float *out, float *a, float *b, int n) { // Declaring the Kernel 
+                for(int i = 0; i < n; i ++){
+                    out[i] = a[i] + b[i];
+                }
+            }
+
+            int main(){
+                float *a, *b, *out;
+                float *d_a, *d_b, *d_out; 
+
+                // Allocate host memory
+                a   = (float*)malloc(sizeof(float) * N);
+                b   = (float*)malloc(sizeof(float) * N);
+                out = (float*)malloc(sizeof(float) * N);
+
+                // Initialize host arrays
+                for(int i = 0; i < N; i++){
+                    a[i] = 1.0f;
+                    b[i] = 2.0f;
+                }
+
+                // Allocate device memory
+                cudaMalloc((void**)&d_a, sizeof(float) * N);
+                cudaMalloc((void**)&d_b, sizeof(float) * N);
+                cudaMalloc((void**)&d_out, sizeof(float) * N);
+
+                // Transfer data from host to device memory
+                cudaMemcpy(d_a, a, sizeof(float) * N, cudaMemcpyHostToDevice);
+                cudaMemcpy(d_b, b, sizeof(float) * N, cudaMemcpyHostToDevice);
+
+                // Executing kernel once
+                vector_add<<<1,1>>>(d_out, d_a, d_b, N);
+                
+                // Transfer data back to host memory
+
+                cudaMemcpy(out, d_out, sizeof(float) * N, cudaMemcpyDeviceToHost);
+
+                // Verification
+                for(int i = 0; i < N; i++){
+                    assert(fabs(out[i] - a[i] - b[i]) < MAX_ERR);
+                }
+                printf("out[0] = %f\n", out[0]);
+                printf("PASSED\n");
+
+                // Deallocate device memory
+                cudaFree(d_a);
+                cudaFree(d_b);
+                cudaFree(d_out);
+
+                // Deallocate host memory
+                free(a); 
+                free(b); 
+                free(out);
+            }
+
 PyTorch
 -------
 
 Use Cases
 ^^^^^^^^^
 
-PyTorch is used for GPU Processing using python. It has built in support for cuda and can be used for general GPU compute using cuda operations or for machine learning training using libraries designed for assisting in training. It makes use of tensor objects to achieve its computation, more can be read on the PyTorch website and documentation `here <https://pytorch.org/>`_.
+PyTorch is used for GPU Processing using Python. It has built in support for CUDA and can be used for general GPU compute using CUDA operations or for machine learning training using libraries designed for assisting in training. It makes use of tensor objects to achieve its computation, more can be read on the PyTorch website and documentation `here <https://pytorch.org/>`_.
 
 Installing
 ^^^^^^^^^^
 
-Due to pytorch's size we need to create a new tmp directory before we can install it, otherwise it will run into issues with the tmp directory becoming full before pytorch can be fully installed, causing the installation to halt. Luckily, creating a new temp directory is easy:
+Due to PyTorch's size we need to create a new tmp directory before we can install it, otherwise it will run into issues with the tmp directory becoming full before PyTorch can be fully installed, causing the installation to halt. Luckily, creating a new temp directory is easy:
 
 .. code-block:: bash
 
     [username@login001]$ mkdir temp_directory
     [username@login001]$ export TMPDIR=~/temp_directory
 
-Once that is completed pytorch can be installed in a python virtual environment with pip as specified on `this <https://pytorch.org/get-started/locally/>`_ page making sure Cuda 11.8 is selected.
+Once that is completed PyTorch can be installed in a python virtual environment with pip as specified on `this <https://pytorch.org/get-started/locally/>`_ page making sure CUDA 11.8 is selected.
 
 Examples
 ^^^^^^^^
@@ -372,111 +478,4 @@ Examples
             result2_seq = heavy_computation(data[size // 2:])
             torch.cuda.synchronize()
             print(f"Time taken without streams: {time.time() - start_time:.3f} seconds.")
-    
-
-Cuda
--------
-Use Cases
-^^^^^^^^^
-CUDA(Compute Unified Device Architecture) is NVIDIA's parallel computing platform and programming model for general-purpose computing on GPUs. It allows direct access to GPU hardware for high-performance computing tasks including scientific simulations, machine learning, image processing, and numerical computations. CUDA is particularly effective for problems that can be parallelized across thousands of GPU cores.
-
-Overview 
-^^^^^^^^^^
-
-CUDA is already installed on Riviera via the modules system. CUDA is typically interfaced with via CUDA C++ which is a minimal set of extensions to the C++ language and runtime library. CUDA C++ is compiled with NVCC. CUDA C++ adds functions called *kernels* which can be executed N times in parallel by N different CUDA threads.
-
-Examples
-^^^^^^^^
-
-.. tabs::
-
-    .. tab:: cuda-example.sh
-
-        .. code-block:: bash
-
-            #!/bin/bash -l
-            #SBATCH --job-name=cuda-example
-            #SBATCH --partition=short-gpu
-            #SBATCH --output=out.log
-            #SBATCH --error=error.log
-            #SBATCH --time=00:01:00
-            #SBATCH --ntasks=1
-
-            module load cuda12.2/blas/12.2.2
-            module load cuda12.2/fft/12.2.2
-            module load cuda12.2/toolkit/12.2.2
-
-            srun nvcc vector_add.cu -o vector_add # Compiles the CUDA C++ program.
-            srun time ./vector_add # Runs and times the cuda program
-
-    .. tab:: vector_add.cu
-
-        .. code-block:: Cuda
-
-            #include <stdio.h>
-            #include <stdlib.h>
-            #include <math.h>
-            #include <assert.h>
-            #include <cuda.h>
-            #include <cuda_runtime.h>
-
-            #define N 10000000
-            #define MAX_ERR 1e-6
-
-            __global__ void vector_add(float *out, float *a, float *b, int n) { // Declaring the Kernel 
-                for(int i = 0; i < n; i ++){
-                    out[i] = a[i] + b[i];
-                }
-            }
-
-            int main(){
-                float *a, *b, *out;
-                float *d_a, *d_b, *d_out; 
-
-                // Allocate host memory
-                a   = (float*)malloc(sizeof(float) * N);
-                b   = (float*)malloc(sizeof(float) * N);
-                out = (float*)malloc(sizeof(float) * N);
-
-                // Initialize host arrays
-                for(int i = 0; i < N; i++){
-                    a[i] = 1.0f;
-                    b[i] = 2.0f;
-                }
-
-                // Allocate device memory
-                cudaMalloc((void**)&d_a, sizeof(float) * N);
-                cudaMalloc((void**)&d_b, sizeof(float) * N);
-                cudaMalloc((void**)&d_out, sizeof(float) * N);
-
-                // Transfer data from host to device memory
-                cudaMemcpy(d_a, a, sizeof(float) * N, cudaMemcpyHostToDevice);
-                cudaMemcpy(d_b, b, sizeof(float) * N, cudaMemcpyHostToDevice);
-
-                // Executing kernel once
-                vector_add<<<1,1>>>(d_out, d_a, d_b, N);
-                
-                // Transfer data back to host memory
-
-                cudaMemcpy(out, d_out, sizeof(float) * N, cudaMemcpyDeviceToHost);
-
-                // Verification
-                for(int i = 0; i < N; i++){
-                    assert(fabs(out[i] - a[i] - b[i]) < MAX_ERR);
-                }
-                printf("out[0] = %f\n", out[0]);
-                printf("PASSED\n");
-
-                // Deallocate device memory
-                cudaFree(d_a);
-                cudaFree(d_b);
-                cudaFree(d_out);
-
-                // Deallocate host memory
-                free(a); 
-                free(b); 
-                free(out);
-            }
-
-
 
