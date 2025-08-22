@@ -5,7 +5,7 @@ Running Code on the Login node
 ------------------------------
 Running code, including creating virtual environments, compiling, and removing large directories should be run on a compute node and not the login node. These tasks can all instead be ran interactively using the ``srun --pty bash`` command which puts a user in a bash environment on the short-cpu partition. Because storage is served up by NFS on Riviera any changes made in your home directory on any partition will be reflected on the user's home directory in all other partitions as well.
 
-Long Running sInteracting Jobs
+Long Running Interacting Jobs
 ------------------------------
 If a job is going to take an extended period of time (longer than one hour) to run sbatch should be used instead of sinteractive. This allows Slurm to properly allocate resources with an understanding of program runtimes.
 
