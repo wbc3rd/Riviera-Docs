@@ -1,10 +1,8 @@
 Frequently Asked Questions
 ===========================
 .. dropdown:: How do I request a Riviera account?
-    
-    .. 
-      To request a Riviera account, go to the `Riviera Website <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ and fill out the access survey located at the bottom of the page.
-    Riviera is not currently accepting new users in order to allow the team to make upgrades to the current system.
+       
+   Riviera is not currently accepting new users in order to allow the team to make upgrades to the current system.
 
 
 .. dropdown:: Who can access the Riviera cluster?
@@ -32,10 +30,7 @@ Frequently Asked Questions
 
 .. dropdown:: How can I request troubleshooting help or schedule a HPC consultation?
 
-  .. 
-    If you need assistance, you can take advantage of a few support options. Contact dsri_riviera_help@colostate.edu for support and troubleshooting about the Riviera cluster. You can request an HPC consultation by `filling out the form <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ to discuss your project needs, optimize performance, or plan resource allocations. Riviera is supported by a Documentation Website that provides quick-start guides, SBATCH script examples, software module help, and have useful links to the `DSRI YouTube channel <https://www.youtube.com/@DataScienceResearchInstitute>`_ for more information about the Riviera cluster. 
-
-  If you need assistance, you can take advantage of a few support options. Contact dsri_riviera_help@colostate.edu for support and troubleshooting about the Riviera cluster. You can request an HPC consultation by `filling out the form <https://www.research.colostate.edu/dsri/hpc-riviera/>`_ to discuss your project needs, optimize performance, or plan resource allocations. Riviera is supported by a Documentation Website that provides quick-start guides, SBATCH script examples, software module help, and have useful links to the `DSRI YouTube channel <https://www.youtube.com/@DataScienceResearchInstitute>`_ for more information about the Riviera cluster. 
+  If you need assistance, you can take advantage of a few support options. Contact dsri_riviera_help@colostate.edu for support and troubleshooting about the Riviera cluster. Riviera is supported by a Documentation Website that provides quick-start guides, SBATCH script examples, software module help, and have useful links to the `DSRI YouTube channel <https://www.youtube.com/@DataScienceResearchInstitute>`_ for more information about the Riviera cluster. 
 
 
 .. dropdown:: How much data can I store in my home directory?
