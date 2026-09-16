@@ -15,4 +15,4 @@ When a user has credentials and is connected to the campus's network, Riviera ca
 
 Open OnDemand
 -------------
-Users can also use Open OnDemand to connect to Riviera, for more information on Open OnDemand see `Open OnDemand <https://riviera-docs.readthedocs.io/en/latest/slurm.html#open-ondemand>`_
+Users can also use Open OnDemand to connect to Riviera, for more information on Open OnDemand see `Open OnDemand <https://riviera-docs.readthedocs.io/en/latest/open_ondemand.html>`_
