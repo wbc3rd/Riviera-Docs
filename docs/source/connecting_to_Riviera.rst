@@ -12,3 +12,7 @@ Upon getting access to Riviera users are provided with their username and an ini
 Secure Shell
 ------------
 When a user has credentials and is connected to the campus's network, Riviera can be accessed through Secure Shell (SSH). To connect to Riviera via SSH a user will run the command ``ssh username@riviera.colostate.edu`` from their terminal of choice. Once prompted the user will enter in their current password, either the one time password supplied initially or the new password they set themselves.
+
+Open OnDemand
+-------------
+Users can also use Open OnDemand to connect to Riviera, for more information on Open OnDemand see `Open OnDemand <https://riviera-docs.readthedocs.io/en/latest/slurm.html#open-ondemand>`_

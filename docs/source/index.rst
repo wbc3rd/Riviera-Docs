@@ -10,6 +10,7 @@ Equipped with 16 A100 GPUs for AI computations and high-memory CPU nodes optimiz
    :maxdepth: 2
 
    connecting_to_Riviera
+   open_ondemand
    frequently_asked_questions
 
 .. toctree::
